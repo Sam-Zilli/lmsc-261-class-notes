@@ -1,6 +1,132 @@
 <section class="terminal-commands">
-    <h1>TERMIMNAL COMMADNS</h1>
+    <h1>TERMINAL COMMANDS</h1>
     <hr>
 
+    <h2>What are Terminal Commands?</h2>
+    <p>Terminal commands are used to interact with your computer's operating system through a command-line interface (CLI). By typing specific commands, you can perform various tasks like navigating directories, managing files, and running scripts.</p>
+
+    <h2>Common Terminal Commands</h2>
+
+    <h3>1. <code>pwd</code> - Print Working Directory</h3>
+    <p>The <code>pwd</code> command displays the current working directory. It stands for "print working directory."</p>
+    
+    <div class="code-container">
+        <div class="console">
+            <div class="line">
+                <p class="line prompt">$ pwd</p>
+                <p class="line">/home/user/Documents</p>
+            </div>
+        </div>
+    </div>
+
+
+    <h3>2. <code>ls</code> - List Directory Contents</h3>
+    <p>The <code>ls</code> command lists the files and directories in the current directory.</p>
+    
+    <div class="code-container">
+        <div class="console">
+            <div class="line">
+                <p class="line prompt">$ ls</p>
+                <p class="line">file1.txt</p>
+                <p class="line">file2.txt</p>
+                <p class="line">Desktop</p>
+                <p class="line">Documents</p>
+                <p class="line">Applications</p>
+            </div>
+        </div>
+    </div>
+
+
+    <h3>3. <code>cd</code> - Change Directory</h3>
+    <p>The <code>cd</code> command is used to change the current working directory.</p>
+    
+    <div class="code-container">
+        <div class="console">
+            <div class="line">
+                <p class="line prompt">$ cd Documents</p>
+                <p class="line prompt">$ ls</p>
+                <p class="line">Music</p>
+                <p class="line">homework.pdf</p>
+            </div>
+        </div>
+    </div>
+
+
+    <h3>4. <code>mkdir</code> - Make Directory</h3>
+    <p>The <code>mkdir</code> command creates a new directory.</p>
+    
+    <div class="code-container">
+        <div class="console">
+            <div class="line">
+                <p class="line prompt">$ mkdir intro-to-programming</p>
+                <p class="line prompt">$ ls</p>
+                <p class="line">Pictures</p>
+                <p class="line">homework.pdf</p>
+                <p class="line">intro-to-programming</p>
+            </div>
+        </div>
+    </div>
+
+
+    <h3>5. <code>rm</code> - Remove File</h3>
+    <p>The <code>rm</code> command removes a file or directory.</p>
+    
+    <div class="code-container">
+        <div class="console">
+            <div class="line">
+                <p class="line prompt">$ rm homework.pdf</p>
+                <p class="line prompt">$ ls</p>
+                <p class="line">Pictures</p>
+                <p class="line">intro-to-programming</p>
+            </div>
+        </div>
+    </div>
+
+
+    <h3>6. <code>touch</code> - Create a New File</h3>
+    <p>The <code>touch</code> command is used to create a new, empty file.</p>
+
+    <div class="code-container">
+        <div class="console">
+            <div class="line">
+                <p class="line prompt">$ touch coding-homework.js</p>
+                <p class="line prompt">$ ls</p>
+                <p class="line">Pictures</p>
+                <p class="line">intro-to-programming</p>
+                <p class="line">coding-homework.js</p>
+            </div>
+        </div>
+    </div>
+
+
+    <h3>7. <code>mv</code> - Renaming OR Moving a file or directory</h3>
+    <p>The <code>mv</code> command does both renaming and moving depending on what you put after it.</p>
+    <br>
+    <p>To RENAME a file called coding-homework.js to be called new-name.js:</p>
+    <div class="code-container">
+        <div class="console">
+            <div class="line">
+                <p class="line prompt">$ mv coding-homework.js new-name.js</p>
+                <p class="line prompt">$ ls</p>
+                <p class="line">Pictures</p>
+                <p class="line">intro-to-programming</p>
+                <p class="line">new-name.js</p>
+            </div>
+        </div>
+    </div>
+    <p>To MOVE a file called new-file.js into the directory intro-to-programming</p>
+    <div class="code-container">
+        <div class="console">
+            <div class="line">
+                <p class="line prompt">$ mv new-name.js intro-to-programming</p>
+                <p class="line prompt">$ ls</p>
+                <p class="line">Pictures</p>
+                <p class="line">intro-to-programming</p>
+                <p class="line prompt">$ cd intro-to-programming</p>
+                <p class="line prompt">$ ls</p>
+                <p class="line">new-name.js</p>
+            </div>
+        </div>
+    </div>
 
 </section>
