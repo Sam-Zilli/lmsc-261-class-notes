@@ -1,0 +1,93 @@
+/* Container for both code and terminal output */
+.code-container {
+    width: 100%;
+    max-width: 800px;  /* Set a max-width for better control */
+    margin: 0 auto;    /* Center-align the container */
+    padding: 1em;      /* Add some padding for better spacing */
+    background-color: #686262;  /* Light grey background for the container */
+    border-radius: 10px;  /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Soft shadow for subtle depth */
+}
+
+/* Code block wrapper with border */
+.code-wrapper {
+    display: flex;
+    border: 2px solid #00ff00;  /* Green border like a terminal */
+    border-radius: 5px;
+    padding: 1em;
+    background-color: #2e2e2e;
+}
+
+/* Add line number styles */
+.code-wrapper .line-numbers {
+    font-family: 'Courier New', Courier, monospace;
+    color: #888;
+    text-align: right;
+    padding-right: 1em;
+    margin-right: 1em;
+    border-right: 1px solid #444; /* Softer green separator */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Each line number in the line-numbers div */
+.code-wrapper .line-numbers .line {
+    margin-bottom: 0.5em;  /* Space between line numbers */
+}
+
+/* Code block styling */
+.code-wrapper .code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #f0f0f0;  /* Lighter color for better readability */
+    background-color: #2e2e2e; /* Dark background for the code block */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Each line of code in the code block */
+.code-wrapper .code .line {
+    margin-bottom: 0.5em;  /* Space between lines of code */
+}
+
+/* Terminal-style Console Output */
+.console {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1e1e1e;  /* Dark background like a terminal */
+    color: #00ff00;  /* Green text color */
+    padding: 1em;
+    border-radius: 10px;
+    /* white-space: pre-wrap;  */
+    line-height: 1.6;
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+
+/* Style each line of console output with a prompt */
+.console .line {
+    display: flex;
+    align-items: center;
+}
+
+.console .prompt {
+    content: '$';  /* Add a prompt symbol */
+    color: #ff9900;  /* Orange prompt */
+    font-weight: bold;
+    margin-right: 10px;  /* Add some space between prompt and output */
+}
+
+/* Blinking cursor only for the last empty line */
+.console .lastLine {
+    content: '|';  /* Simulate a blinking cursor */
+    animation: blink 1s step-end infinite;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,57 @@
+/* Sidebar */
+#sidebar-container {
+    position: fixed;  /* Fix the sidebar to the left */
+    top: 0;
+    left: 0;
+    height: 100vh;  /* Full height */
+    width: 250px;  /* Set the sidebar width */
+    background-color: #343a40;
+    color: #fff;
+    padding-top: 20px;
+    z-index: 1000;  /* Ensure it stays on top of other elements */
+}
+
+/* Sidebar Navigation */
+.sidebar nav ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.sidebar nav ul .nav-item {
+    margin-bottom: 10px;
+}
+
+.sidebar nav ul .nav-link {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+.sidebar nav ul .nav-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.sidebar .section-header {
+    font-weight: bold;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 250px;  /* Offset by sidebar width */
+    padding: 20px;
+    padding-top: 20px;  /* Ensure content is not hidden behind fixed navbar */
+}
+
+/* Responsive: Adjust layout on smaller screens */
+@media (max-width: 768px) {
+    #sidebar-container {
+        position: static;  /* Allow sidebar to scroll with content on smaller screens */
+        width: 100%;  /* Make sidebar full-width */
+        height: auto;  /* Adjust height for smaller screens */
+    }
+    .main-content {
+        margin-left: 0;  /* Reset left margin for smaller screens */
+    }
+}
