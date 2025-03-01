@@ -50,7 +50,7 @@
 
             // Function to load content based on the current URL hash
             function loadContent() {
-                const contentPlaceholder = document.querySelector('.main-content'); // Select the main-content div
+                const contentPlaceholder = document.getElementById('content-placeholder');
                 const hash = window.location.hash;
 
                 // Clear the content placeholder
@@ -69,16 +69,11 @@
                             <p>This section explains useful terminal commands.</p>
                         `;
                         break;
-                    case '#/javascript/variables':
-                        fetch('javascript/variables.html')
-                        .then(response => response.text())
-                        .then(data => {
-                            contentPlaceholder.innerHTML = data; // Inject the content of variables.html into the main-content div
-                        })
-                        .catch(error => {
-                            console.error('Error loading section 3.1 content:', error);
-                            contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
-                        });
+                    case '#/javascript/section1':
+                        contentPlaceholder.innerHTML = `
+                            <h1>JavaScript Section 2.1</h1>
+                            <p>This section covers the basics of JavaScript variables.</p>
+                        `;
                         break;
                     case '#/javascript/section2':
                         contentPlaceholder.innerHTML = `
