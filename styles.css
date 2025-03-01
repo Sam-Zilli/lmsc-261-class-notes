@@ -93,14 +93,6 @@
 }
 
 
-p {
-    font-size: 1.1em;         /* Slightly larger than the default for better readability */
-    line-height: 1.6;        
-    margin-bottom: 1em;       /* Add space below paragraphs */
-    height: 20px;
-}
-
-
 /* Video container styling to make it look similar to code blocks */
 .video-container {
     width: 100%;
@@ -142,6 +134,7 @@ h2 {
     margin-bottom: 0.5em;    /* Add space below */
     border-bottom: 2px solid #00ff00; /* Add a green underline for emphasis */
     padding-bottom: 0.2em;   /* Add some space between text and the line */
+    line-height: 1.5;  /* Adjust line height for better readability */
 }
 
 /* Style for h4 elements (subsections under h2) */

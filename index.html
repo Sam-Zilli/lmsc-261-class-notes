@@ -57,15 +57,14 @@
                 contentPlaceholder.innerHTML = '';
 
                 switch (hash) {
-
-                    case '#/common-errors':
-                        fetch('common-errors/common-errors.html')
+                    case '#/terminal/common-terminal-errors':
+                        fetch('terminal/common-terminal-errors.html')
                             .then(response => response.text())
                             .then(data => {
-                                contentPlaceholder.innerHTML = data; // Inject the content of common-errors.html into the main-content div
+                                contentPlaceholder.innerHTML = data;  // Inject the content of common-terminal-errors.html into the main-content div
                             })
                             .catch(error => {
-                                console.error('Error loading Common Errors Page:', error);
+                                console.error('Error loading Common Terminal Errors Page:', error);
                                 contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
                             });
                             break;

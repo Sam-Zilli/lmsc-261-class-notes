@@ -4,45 +4,46 @@
 
     <h2>What is a File Path?</h2>
     <p>A file path is the location of a file or directory on your computer. It shows the hierarchy of directories (folders) leading to a specific file. </p>
-    <br>
+  
     <p>In the terminal, file paths are used to navigate to different files and directories.</p>
-    <br>
+
 
     <img src="assets/images/file-paths.jpg" alt="File Paths" class="diagram" style="width: 500px; height: auto; padding: 2em;">
 
-    <br>
+
     <p>File paths can be <strong>absolute</strong> or <strong>relative</strong>:</p>
     <ul>
         <li><strong>Absolute Path:</strong> An absolute path starts from the root directory and specifies the complete path to a file or directory. It is the full path to the file or directory from the root.</li>
+        <br>
         <li><strong>Relative Path:</strong> A relative path specifies the location of a file or directory in relation to the current directory.</li>
     </ul>
 
+    
     <h2>Examples of File Paths</h2>
 
     <h3>1. Absolute Path</h3>
     <p>An absolute path gives the complete address of a file starting from the root directory. It does not depend on the current working directory.</p>
-    <p><strong>Example:</strong> The absolute path to a file might look like this:</p>
+    <p><strong>Example:</strong> The absolute path to file.js no matter where you are would look like this:</p>
     <div class="code-container">
         <div class="console">
             <div class="line">
-                <p class="line">/home/user/Documents/file.txt</p>
+                <p class="line">/Users/samz/Documents/intro-to-programming/file.js</p>
             </div>
         </div>
     </div>
-    <p>Here, <code>/home/user/Documents/</code> is the path to the directory, and <code>file.txt</code> is the file located inside that directory. The path starts from the root directory <code>/</code>.</p>
-
+    <br>
     <h3>2. Relative Path</h3>
     <p>A relative path is based on the current directory. It does not start from the root but from the current directory where you are located.</p>
-    <p><strong>Example:</strong> If you are currently in the <code>/home/user/</code> directory and you want to access a file in the <code>Documents</code> folder, the relative path would be:</p>
+    <p><strong>Example:</strong> If you are currently in the <code>/Users/samz/Documents</code> directory and you want to access a file.js the relative path would be:</p>
     <div class="code-container">
         <div class="console">
             <div class="line">
-                <p class="line">Documents/file.txt</p>
+                <p class="line">intro-to-programming/file.js</p>
             </div>
         </div>
     </div>
-    <p>The relative path <code>Documents/file.txt</code> starts from the current directory and does not include the root path.</p>
 
+<!-- 
     <h3>3. Navigating with <code>cd</code> and File Paths</h3>
     <p>When you use the <code>cd</code> command, you can navigate using either absolute or relative paths:</p>
 
@@ -72,8 +73,8 @@
         <li><strong><code>~</code></strong> - Represents the home directory of the current user. For example, <code>cd ~/Documents</code> takes you to the <code>Documents</code> folder in your home directory.</li>
         <li><strong><code>.</code></strong> - Represents the current directory. For example, <code>./file.txt</code> refers to a file named <code>file.txt</code> in the current directory.</li>
         <li><strong><code>..</code></strong> - Represents the parent directory. For example, <code>cd ..</code> moves you up one level in the directory tree.</li>
-    </ul>
-
+    </ul> -->
+<!-- 
     <h2>File Path Examples in Terminal</h2>
 
     <h3>1. Moving to the Home Directory</h3>
@@ -106,5 +107,5 @@
                 <p class="line prompt">$ cd Documents</p>
             </div>
         </div>
-    </div>
+    </div> -->
 </section>
