@@ -1,0 +1,360 @@
+<section id="javasript-data-types">
+    <h1>Data Types Overview</h1>
+    <hr>
+
+        <h2>What are they?</h2>
+            <p>Variables can hold different types of data. The type of data determines what operations can be performed on it.</p>
+            <p>You can find out what data type a variable is holding by using typeof()</p>
+            <div class="code-container">
+                <div class="code-wrapper">
+                    <div class="line-numbers">
+                        <div class="line">1</div>
+                        <div class="line">2</div>
+                    </div>
+                    <div class="code">
+                        <div class="line">let x = 5;</div>
+                        <div class="line">console.log(typeof(x))</div>
+                    </div>
+                </div>
+        
+                <div class="console">
+                    <div class="line">
+                        <p class="line">number</p>
+                        <p class="last-line"> </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <h2>Numbers</h2>
+            <p>Integers (whole numebrs like 1,2,3,4,-35) and Floating Point (numbers with decimal places like 3.1415)</p>
+            <p>Some special values that won't be relevent to our class (such as Infinity and -Infinity)</p>
+            <p>Numbers are written without quotes around them, like this...</p>
+            <div class="code-container">
+                <div class="code-wrapper">
+                    <div class="line-numbers">
+                        <div class="line">1</div>
+                    </div>
+                    <div class="code">
+                        <div class="line">let x = 5;</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subsection">
+                <h4>Operations</h4>
+                <p>Numbers can be added, subtracted, multiplied, divided, and more...</p>
+                <div class="code-container">
+                    <div class="code-wrapper">
+                        <div class="line-numbers">
+                            <div class="line">1</div>
+                            <div class="line">2</div>
+                            <div class="line">3</div>
+                            <div class="line">4</div>
+                        </div>
+                        <div class="code">
+                            <div class="line">let x = 5;</div>
+                            <div class="line">let y = 15;</div>
+                            <div class="line">console.log(x + 1);</div>
+                            <div class="line">console.log(y - x);</div>
+                        </div>
+                    </div>
+            
+                    <div class="console">
+                        <div class="line">
+                            <p class="line">6</p>
+                            <p class="line">10</p>
+                            <p class="last-line"> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Strings</h2>
+                <p>Strings represent text and are written inside single quotes, double quotes, or backticks (template literals).</p>
+                <p>Here’s an example of defining a string:</p>
+                <div class="code-container">
+                    <div class="code-wrapper">
+                        <div class="line-numbers">
+                            <div class="line">1</div>
+                        </div>
+                        <div class="code">
+                            <div class="line">let greeting = "Hello, World!";</div>
+                        </div>
+                    </div>
+                </div>
+                <p>Strings can be concatenated with the <code>+</code> operator:</p>
+                <div class="code-container">
+                    <div class="code-wrapper">
+                        <div class="line-numbers">
+                            <div class="line">1</div>
+                        </div>
+                        <div class="code">
+                            <div class="line">let greeting = "Hello, " + "World!";</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subsection">
+                    <h4>Operations</h4>
+                    <p>You can use operators on Strings, but they behave differently than Numbers.</p>
+                    <p>Look what happens when you use the + operator with the String x and a Number 2</p>
+                    <br/>
+                    <div class="code-container">
+                        <div class="code-wrapper">
+                            <div class="line-numbers">
+                                <div class="line">1</div>
+                                <div class="line">2</div>
+                            </div>
+                            <div class="code">
+                                <div class="line">let x = '5';</div>
+                                <div class="line">console.log(x + 2);</div>
+                            </div>
+                        </div>
+                
+                        <div class="console">
+                            <div class="line">
+                                <p class="line">52</p>
+                                <p class="last-line"> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Booleans</h2>
+                <p>Booleans represent a truth value and can either be <code>true</code> or <code>false</code>.</p>
+                <p>Booleans are commonly used in conditional statements:</p>
+                <div class="code-container">
+                    <div class="code-wrapper">
+                        <div class="line-numbers">
+                            <div class="line">1</div>
+                            <div class="line">2</div>
+                            <div class="line">3</div>
+                            <div class="line">4</div>
+                        </div>
+                        <div class="code">
+                            <div class="line">let isRaining = true;</div>
+                            <div class="line">if (isRaining) {</div>
+                            <div class="line">    console.log("Take an umbrella!");</div>
+                            <div class="line">}</div>
+                        </div>
+                    </div>
+                        <div class="console">
+                            <div class="line">
+                                <p class="line">Take an umbrella!</p>
+                                <p class="last-line"> </p>
+                            </div>
+                        </div>
+                </div>
+
+                <h2>Undefined</h2>
+                <p>When a variable is declared but not assigned a value, it has the value <code>undefined</code>.</p>
+                <div class="code-container">
+                    <div class="code-wrapper">
+                        <div class="line-numbers">
+                            <div class="line">1</div>
+                            <div class="line">2</div>
+                        </div>
+                        <div class="code">
+                            <div class="line">let x;</div>
+                            <div class="line">console.log(x);</div>
+                        </div>
+                    </div>
+                    <div class="console">
+                        <div class="line">
+                            <p class="line">undefined</p>
+                            <p class="last-line"> </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Arrays</h2>
+                <p>Arrays are used to store multiple values in a single variable. An array is an ordered list of elements enclosed in square brackets <code>[]</code>, with elements separated by commas.</p>
+                <br>
+                <p>Each element (item) in the Array does NOT need to be the same data type.</p>
+                <br>
+                <div class="code-container">
+                    <div class="code-wrapper">
+                        <div class="line-numbers">
+                            <div class="line">1</div>
+                            <div class="line">2</div>
+                            <div class="line">3</div>
+                            <div class="line">4</div>
+
+                        </div>
+                        <div class="code">
+                            <div class="line">let fruits = ["apple", "banana", "cherry"];</div>
+                            <div class="line">console.log(fruits[0]);</div>
+                            <div class="line">console.log(fruits[1]);</div>
+                            <div class="line">console.log(fruits[2]);</div>
+                        </div>
+
+                    </div>
+                    <div class="console">
+                        <div class="line">
+                            <p class="line">apple</p>
+                            <p class="line">banana</p>
+                            <p class="line">cherry</p>
+                            <p class="last-line"> </p>
+                        </div>
+                    </div>
+                </div>
+                <p>You can access individual elements of an array using their index (starting from 0), as shown in the example above.</p>
+
+                <div class="subsection">
+                    <h4>Common Array Methods (functions)</h4>
+            
+                    <br>
+                    <h5>Find the index of an element with <code>indexOf()</code></h5>
+                    <br>
+                    <div class="code-container">
+                        <div class="code-wrapper">
+                            <div class="line-numbers">
+                                <div class="line">1</div>
+                                <div class="line">2</div>
+                            </div>
+                            <div class="code">
+                                <div class="line">let myArr = ['apple', 'banana', 'cherry'];</div>
+                                <div class="line">console.log(myArr.indexOf('banana'));</div>
+                            </div>
+                        </div>
+                
+                        <div class="console">
+                            <div class="line">
+                                <p class="line">1</p>
+                                <p class="last-line"> </p>
+                            </div>
+                        </div>
+    
+                    </div>
+            
+                    <br>
+                    <h5>Check if an element exists with <code>includes()</code></h5>
+                    <br>
+                    <div class="code-container">
+                        <div class="code-wrapper">
+                            <div class="line-numbers">
+                                <div class="line">1</div>
+                                <div class="line">2</div>
+                            </div>
+                            <div class="code">
+                                <div class="line">let myArr = ['apple', 'banana', 'cherry'];</div>
+                                <div class="line">console.log(myArr.includes('banana')); </div>
+                                <div class="line">console.log(myArr.includes('orange')); </div>
+                            </div>
+                        </div>
+                            <div class="console">
+                                <div class="line">
+                                    <p class="line">true</p>
+                                    <p class="line">false</p>
+                                    <p class="last-line"> </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    <br>
+                    <h5>Sort elements in an array with <code>sort()</code></h5>
+                    <br>
+                    <div class="code-container">
+                        <div class="code-wrapper">
+                            <div class="line-numbers">
+                                <div class="line">1</div>
+                                <div class="line">2</div>
+                                <div class="line">3</div>
+                            </div>
+                            <div class="code">
+                                <div class="line">let myArr = ['banana', 'apple', 'cherry'];</div>
+                                <div class="line">myArr.sort();</div>
+                                <div class="line">console.log(myArr);</div>
+                            </div>
+                        </div>
+                            <div class="console">
+                                <div class="line">
+                                    <p class="line">[ 'apple', 'banana', 'cherry' ]</p>
+                                    <p class="last-line"> </p>
+                                </div>
+                            </div>
+                        </div>
+            
+                    <br>
+                    <h5>Reverse the order of an array with <code>reverse()</code></h5>
+                    <br>
+                    <div class="code-container">
+                        <div class="code-wrapper">
+                            <div class="line-numbers">
+                                <div class="line">1</div>
+                                <div class="line">2</div>
+                                <div class="line">3</div>
+                            </div>
+                            <div class="code">
+                                <div class="line">let myArr = [1, 2, 3, 4, 5]</div>
+                                <div class="line">myArr.reverse()</div>
+                                <div class="line">console.log(myArr)</div>
+                            </div>
+                        </div>
+                            <div class="console">
+                                <div class="line">
+                                    <p class="line">[ 5, 4, 3, 2, 1 ]</p>
+                                    <p class="last-line"> </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    <br>
+                    <h5>Check if an element exists with <code>includes()</code></h5>
+                    <br>
+                    <div class="code-container">
+                        <div class="code-wrapper">
+                            <div class="line-numbers">
+                                <div class="line">1</div>
+                                <div class="line">2</div>
+                                <div class="line">3</div>
+                            </div>
+                            <div class="code">
+                                <div class="line">let myArr = ['apple', 'banana', 'cherry'];</div>
+                                <div class="line">console.log(myArr.includes('banana')); </div>
+                                <div class="line">console.log(myArr.includes('orange')); </div>
+                            </div>
+                        </div>
+                            <div class="console">
+                                <div class="line">
+                                    <p class="line">true</p>
+                                    <p class="line">false</p>
+                                    <p class="last-line"> </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    <br>
+                    <h5>Iterate through the array with <code>forEach()</code></h5>
+                    <br>
+                    <div class="code-container">
+                        <div class="code-wrapper">
+                            <div class="line-numbers">
+                                <div class="line">1</div>
+                                <div class="line">2</div>
+                                <div class="line">3</div>
+                                <div class="line">4</div>
+                            </div>
+                            <div class="code">
+                                <div class="line">let myArr = ['apple', 'banana', 'cherry'];</div>
+                                <div class="line">myArr.forEach(function(item) {</div>
+                                <div class="line" style="padding-left: 40px;">console.log(item);</div>
+                                <div class="line">});</div>
+                            </div>
+                        </div>
+                        <div class="console">
+                            <div class="line">
+                                <p class="line">apple</p>
+                                <p class="line">banana</p>
+                                <p class="line">cherry</p>
+                                <p class="last-line"> </p>
+                            </div>
+                    </div>
+
+
+                </div>
+            
+            </section>

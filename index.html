@@ -57,18 +57,31 @@
                 contentPlaceholder.innerHTML = '';
 
                 switch (hash) {
+
                     case '#/common-errors':
-                        contentPlaceholder.innerHTML = `
-                            <h1>Common Errors</h1>
-                            <p>This section covers common JavaScript errors.</p>
-                        `;
-                        break;
+                        fetch('common-errors/common-errors.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                contentPlaceholder.innerHTML = data; // Inject the content of common-errors.html into the main-content div
+                            })
+                            .catch(error => {
+                                console.error('Error loading Common Errors Page:', error);
+                                contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
+                            });
+                            break;
+
                     case '#/terminal':
-                        contentPlaceholder.innerHTML = `
-                            <h1>Terminal Commands</h1>
-                            <p>This section explains useful terminal commands.</p>
-                        `;
-                        break;
+                        fetch('terminal/terminal-commands.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                contentPlaceholder.innerHTML = data;  // Inject the content of terminal-commands.html into the main-content div
+                            })
+                            .catch(error => {
+                                console.error('Error loading Terminal Commands Page:', error);
+                                contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
+                            });
+                            break;
+
                     case '#/javascript/variables':
                         fetch('javascript/variables.html')
                         .then(response => response.text())
@@ -76,28 +89,37 @@
                             contentPlaceholder.innerHTML = data; // Inject the content of variables.html into the main-content div
                         })
                         .catch(error => {
-                            console.error('Error loading section 3.1 content:', error);
+                            console.error('Error loading JavaScript Variables Section:', error);
                             contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
                         });
                         break;
-                    case '#/javascript/section2':
-                        contentPlaceholder.innerHTML = `
-                            <h1>JavaScript Section 2.2</h1>
-                            <p>This section dives deeper into JavaScript functions.</p>
-                        `;
-                        break;
-                    case '#/html-css/section1':
-                        contentPlaceholder.innerHTML = `
-                            <h1>HTML & CSS Section 3.1</h1>
-                            <p>This section introduces the basics of HTML and CSS.</p>
-                        `;
-                        break;
-                    case '#/html-css/section2':
-                        contentPlaceholder.innerHTML = `
-                            <h1>HTML & CSS Section 3.2</h1>
-                            <p>This section dives deeper into advanced HTML and CSS.</p>
-                        `;
-                        break;
+
+                    case '#/javascript/data-types-overview':
+                        fetch('javascript/data-types-overview.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                contentPlaceholder.innerHTML = data; // Inject the content of data-types.html into the main-content div
+                            })
+                            .catch(error => {
+                                console.error('Error loading JavaScript Data Types Section:', error);
+                                contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
+                            });
+                            break;
+
+
+                    // case '#/html-css/section1':
+                    //     contentPlaceholder.innerHTML = `
+                    //         <h1>HTML & CSS Section 3.1</h1>
+                    //         <p>This section introduces the basics of HTML and CSS.</p>
+                    //     `;
+                    //     break;
+                    // case '#/html-css/section2':
+                    //     contentPlaceholder.innerHTML = `
+                    //         <h1>HTML & CSS Section 3.2</h1>
+                    //         <p>This section dives deeper into advanced HTML and CSS.</p>
+                    //     `;
+                    //     break;
+
                     default:
                         contentPlaceholder.innerHTML = `
                             <h1>Welcome</h1>

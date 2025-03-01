@@ -2,7 +2,7 @@
 .code-container {
     width: 100%;
     max-width: 800px;  /* Set a max-width for better control */
-    margin: 0 auto;    /* Center-align the container */
+
     padding: 1em;      /* Add some padding for better spacing */
     background-color: #686262;  /* Light grey background for the container */
     border-radius: 10px;  /* Slightly rounded corners */
@@ -12,6 +12,7 @@
 /* Code block wrapper with border */
 .code-wrapper {
     display: flex;
+    flex-direction : row;
     border: 2px solid #00ff00;  /* Green border like a terminal */
     border-radius: 5px;
     padding: 1em;
@@ -59,23 +60,22 @@
     color: #00ff00;  /* Green text color */
     padding: 1em;
     border-radius: 10px;
-    /* white-space: pre-wrap;  */
     line-height: 1.6;
     font-size: 1.2em;
     margin-top: 1em;
 }
 
-/* Style each line of console output with a prompt */
+/* Style each line of console output */
 .console .line {
-    display: flex;
-    align-items: center;
+    display: block; /* Ensure that each line of output is on its own line */
+    margin-bottom: 0.5em; /* Optional: Adds spacing between each line */
 }
 
+/* Optional: Style for the prompt symbol */
 .console .prompt {
-    content: '$';  /* Add a prompt symbol */
     color: #ff9900;  /* Orange prompt */
     font-weight: bold;
-    margin-right: 10px;  /* Add some space between prompt and output */
+    margin-right: 10px;  /* Space between prompt and output */
 }
 
 /* Blinking cursor only for the last empty line */
@@ -91,3 +91,88 @@
         opacity: 0;
     }
 }
+
+
+p {
+    font-size: 1.1em;         /* Slightly larger than the default for better readability */
+    line-height: 1.6;        
+    margin-bottom: 1em;       /* Add space below paragraphs */
+    height: 20px;
+}
+
+
+/* Video container styling to make it look similar to code blocks */
+.video-container {
+    width: 100%;
+    max-width: 800px;  /* Set a max-width for better control */
+    padding: 1em;      /* Add some padding for better spacing */
+    background-color: #686262;  /* Light grey background for the container */
+    border-radius: 10px;  /* Slightly rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Soft shadow for subtle depth */
+}
+
+/* Embed video element styling */
+.video-container video {
+    width: 100%;  /* Make the video take up the full width of its container */
+    height: auto; /* Maintain aspect ratio of the video */
+    border-radius: 5px;  /* Rounded corners for the video */
+    display: block;  /* Remove any inline spacing */
+}
+
+/* Optional: Style for the video container's title or description */
+.video-container h3 {
+    font-size: 1.2em;
+    color: #f0f0f0;  /* Light text color for better readability */
+    margin-bottom: 1em;
+}
+
+
+
+
+
+
+
+/* Style for h2 elements */
+h2 {
+    font-size: 2em;          /* Increase font size */
+    color: #084408;          /* Make the text green for visibility */
+    font-weight: bold;       /* Make the text bold */
+    text-transform: uppercase; /* Uppercase text for added emphasis */
+    margin-top: 1.5em;       /* Add space above */
+    margin-bottom: 0.5em;    /* Add space below */
+    border-bottom: 2px solid #00ff00; /* Add a green underline for emphasis */
+    padding-bottom: 0.2em;   /* Add some space between text and the line */
+}
+
+/* Style for h4 elements (subsections under h2) */
+h4 {
+    font-size: 1.5em;        /* Make the text slightly smaller than h2 */
+    color: #996262;          /* Lighter color for a softer look */
+    font-weight: bold;       /* Make the text bold */
+    margin-top: 1em;         /* Add space above */
+    margin-bottom: 0.5em;    /* Add space below */
+    padding-left: 1em;       /* Indent to show it’s a subsection */
+
+}
+
+
+
+
+
+
+
+
+
+/* Add this to your CSS to indent entire subsections */
+.subsection {
+    margin-left: 2em; /* Indent the entire subsection */
+    padding-left: 1.5em; /* Optional: Padding for more space */
+    border-left: 4px solid #ff9900; /* Optional: Add a left border to visually separate the section */
+}
+
+/* Optional: Style for the content inside a subsection (e.g., code blocks) */
+.subsection p,
+.subsection .code-container {
+    margin-left: 1em;  /* Indent text inside the subsection */
+}
+
