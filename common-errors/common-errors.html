@@ -1,6 +1,171 @@
 <section class="common-errors">
     <h1>Common Errors</h1>
     <hr>
-    <h3> aksjdaks</h3>
+
+    <h2>Common Terminal Errors</h2>
+
+    <h3>1. <code>cd: no such file or directory</code> - Directory Not Found</h3>
+    <p>This error occurs when you try to navigate to a directory that doesn't exist.</p>
+    <p><strong>Example:</strong></p>
+    <div class="code-container">
+            <div class="console">
+                <div class="line prompt">$ cd folderThree</div>
+                <div class="line error">cd: no such file or directory: folderThree</div>
+            </div>
+    </div>
+    <br>
+    <p><strong>Explanation:</strong> The error occurs because the directory <code>folderThree</code> does not exist in the current path, so the system is unable to navigate to it.</p>
+
+    <h3>Fix:</h3>
+    <p>Make sure the directory exists by running <code>ls</code> to check the available directories. Either fix the spelling to match a directory that exists where you are, OR change your location.
+    <br>
+
+    <!-- <h2>Common JavaScript Errors</h2> -->
+    <!-- <h2>1. <code>ReferenceError</code> - Variable Not Defined</h2>
+    <p>The <code>ReferenceError</code> occurs when you try to access a variable that has not been declared or initialized.</p>
+    <p><strong>Example:</strong></p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">console.log(myVar);</div>
+                <div class="line">let myVar = 5;</div>
+            </div>
+        </div>
+    </div>
+    <p><strong>Explanation:</strong> In the example above, the <code>ReferenceError</code> occurs because the variable <code>myVar</code> is used before it is declared. JavaScript has a "hoisting" behavior that moves variable declarations to the top, but it doesn't assign values to them until the code execution reaches that line.</p>
+
+    <h3>Fix:</h3>
+    <p>Always declare and initialize variables before using them.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">let myVar = 5;</div>
+                <div class="line">console.log(myVar);</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>2. <code>TypeError</code> - Invalid Operation on Undefined or Null</h2>
+    <p>A <code>TypeError</code> occurs when you try to perform an operation on a value that is <code>undefined</code> or <code>null</code>.</p>
+    <p><strong>Example:</strong></p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let obj = null;</div>
+                <div class="line">console.log(obj.name); // TypeError</div>
+            </div>
+        </div>
+    </div>
+    <p><strong>Explanation:</strong> Trying to access a property or method of a <code>null</code> object results in a <code>TypeError</code>.</p>
+
+    <h3>Fix:</h3>
+    <p>Always check that an object is not <code>null</code> before trying to access its properties or methods.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">let obj = { name: 'John' };</div>
+                <div class="line">console.log(obj.name); // John</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>3. <code>SyntaxError</code> - Incorrect Syntax</h2>
+    <p>A <code>SyntaxError</code> occurs when there is an error in the structure of your JavaScript code. It could be due to missing parentheses, brackets, or semicolons.</p>
+    <p><strong>Example:</strong></p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let x = (5;</div>
+            </div>
+        </div>
+    </div>
+    <p><strong>Explanation:</strong> The missing closing parenthesis causes a <code>SyntaxError</code>.</p>
+
+    <h3>Fix:</h3>
+    <p>Always ensure that all parentheses, brackets, and braces are correctly closed.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let x = (5);</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>4. <code>RangeError</code> - Invalid Array Length</h2>
+    <p>A <code>RangeError</code> occurs when you try to assign an invalid length to an array or when you use an invalid value in an operation that requires a specific range.</p>
+    <p><strong>Example:</strong></p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let arr = new Array(-1); // RangeError</div>
+            </div>
+        </div>
+    </div>
+    <p><strong>Explanation:</strong> Creating an array with a negative length will cause a <code>RangeError</code> because array lengths must be non-negative integers.</p>
+
+    <h3>Fix:</h3>
+    <p>Ensure that the length of the array is a positive integer.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let arr = new Array(5); // Valid array of length 5</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>5. <code>EvalError</code> - Error with <code>eval()</code> Function</h2>
+    <p>An <code>EvalError</code> is thrown when the <code>eval()</code> function is used incorrectly.</p>
+    <p><strong>Example:</strong></p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">eval('console.log(Hello))'); // EvalError</div>
+            </div>
+        </div>
+    </div>
+    <p><strong>Explanation:</strong> The incorrect syntax in the <code>eval()</code> function will result in an <code>EvalError</code>.</p>
+
+    <h3>Fix:</h3>
+    <p>Make sure that the code passed to the <code>eval()</code> function is properly formatted and syntactically correct.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">eval('console.log("Hello")'); // Correct usage</div>
+            </div>
+        </div> 
+    </div> -->
 
 </section>

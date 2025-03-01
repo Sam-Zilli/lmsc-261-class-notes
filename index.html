@@ -70,7 +70,7 @@
                             });
                             break;
 
-                    case '#/terminal':
+                    case '#/terminal/terminal-commands':
                         fetch('terminal/terminal-commands.html')
                             .then(response => response.text())
                             .then(data => {
@@ -81,6 +81,20 @@
                                 contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
                             });
                             break;
+
+                    case '#/terminal/file-paths':
+                        fetch('terminal/file-paths.html')
+                            .then(response => response.text())
+                            .then(data => {
+                                contentPlaceholder.innerHTML = data;  // Inject the content of file-paths.html into the main-content div
+                            })
+                            .catch(error => {
+                                console.error('Error loading Terminal Commands Page:', error);
+                                contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
+                            });
+                            break;
+
+                    
 
                     case '#/javascript/variables':
                         fetch('javascript/variables.html')
