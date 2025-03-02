@@ -1,0 +1,139 @@
+<section id="javascript-functions">
+    <h1>JavaScript Functions</h1>
+    <hr>
+    <h2>What is a Function?</h2>
+    <p>A function in JavaScript is a block of reusable code that performs a specific task. Functions can take inputs, called parameters, and return an output, though they don’t always have to.</p>
+    
+    <h2>Declaring a Function</h2>
+    <p>There are multiple ways to declare a function in JavaScript. Let’s start with the most common one — using the <code>function</code> keyword:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">function greet() {</div>
+                <div class="line indent">console.log("Hello, World!");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+
+    <p>In this example, we define a function called <code>greet</code>. It doesn't take any parameters and simply logs "Hello, World!" to the console.</p>
+    
+    <h3>Calling a Function</h3>
+    <p>To run the code inside a function, we call it by its name, followed by parentheses:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">greet();</div>
+            </div>
+        </div>
+    </div>
+
+    <p>When you call <code>greet()</code>, it will execute the code inside the function and output "Hello, World!" to the console.</p>
+
+    <h2>Functions with Parameters</h2>
+    <p>Functions can accept inputs, called parameters, which can be used within the function. Here's an example of a function that takes a parameter:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">3</div>
+            </div>
+            <div class="code">
+                <div class="line">function greet(name) {</div>
+                <div class="line indent">  console.log("Hello, " + name + "!");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+
+    <p>In this case, the function <code>greet</code> takes a <code>name</code> parameter, and when called, it will output a personalized greeting:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">4</div>
+            </div>
+            <div class="code">
+                <div class="line">greet("Alice");</div>
+            </div>
+        </div>
+    </div>
+
+    <p>The output would be: <strong>Hello, Alice!</strong></p>
+
+    <h2>Functions with Return Values</h2>
+    <p>Functions can also return a value. This is useful when you want the function to calculate something and give you a result to use elsewhere in your code.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">5</div>
+            </div>
+            <div class="code">
+                <div class="line">function add(a, b) {</div>
+                <div class="line indent">  return a + b;</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+
+    <p>The function <code>add</code> takes two parameters, <code>a</code> and <code>b</code>, and returns their sum. Here's how you can use it:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">6</div>
+            </div>
+            <div class="code">
+                <div class="line">let result = add(3, 4);</div>
+                <div class="line">console.log(result); // 7</div>
+            </div>
+        </div>
+    </div>
+
+    <p>The output would be: <strong>7</strong>, which is the result of adding 3 and 4.</p>
+
+    <!-- <h2>Anonymous Functions</h2>
+    <p>Functions in JavaScript can also be anonymous, meaning they don’t have a name. These are often used as arguments to other functions or in event handlers. Here’s an example:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">7</div>
+            </div>
+            <div class="code">
+                <div class="line">setTimeout(function() {</div>
+                <div class="line">  console.log("This is an anonymous function!");</div>
+                <div class="line">}, 1000);</div>
+            </div>
+        </div>
+    </div>
+
+    <p>This anonymous function is passed to the <code>setTimeout</code> function, which will execute it after 1000 milliseconds (1 second).</p> -->
+
+    <!-- <h2>Arrow Functions</h2>
+    <p>Arrow functions are a more concise way to write functions. They are especially useful for short functions. Here’s how you can rewrite the <code>add</code> function as an arrow function:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">8</div>
+            </div>
+            <div class="code">
+                <div class="line">const add = (a, b) => a + b;</div>
+            </div>
+        </div>
+    </div>
+
+    <p>In this example, we use the arrow syntax <code>()=></code> to create a more compact version of the <code>add</code> function.</p> -->
+
+    <h3>Summary of Key Points</h3>
+    <ul>
+        <li>A function is a block of reusable code.</li>
+        <li>Functions can accept parameters and return values.</li>
+        <li>You can define a function using the <code>function</code> keyword or an arrow function.</li>
+        <li>Functions can be anonymous and passed as arguments to other functions.</li>
+    </ul>
+
+    <h5>Now you know how to create and use functions in JavaScript! Functions are a powerful way to organize and reuse your code.</h5>
+</section>

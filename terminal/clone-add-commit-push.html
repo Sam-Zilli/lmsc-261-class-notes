@@ -1,0 +1,89 @@
+<section id="git-commands">
+    <h1>Clone, Add, Commit, and Push from terminal</h1>
+    <hr>
+    <h2>What are these commands?</h2>
+    <p>Git is a version control system that allows you to manage and track changes in your code. The commands we will cover are used to interact with a Git repository, making it easy to manage your project.</p>
+
+    <h2>1. Git Clone</h2>
+    <p>The 'git clone' command is used to create a local copy of a remote repository. This is typically the first step when you want to start working on an existing project.</p>
+    <p>NOTE: Make sure you are in the directory where you want this repo to be cloned before you run the command!</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">git clone https://github.com/username/repository.git</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <p>This will download the repository from GitHub (or another Git hosting service) to your local machine, allowing you to make changes.</p>
+
+
+    <h3 style="background-color: #bda742; color: white; padding: 10px 20px; border-radius: 5px; font-family: Arial, sans-serif; font-size: 18px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+        After you've cloned your repo and made changes to it, it's time to do the three-step process to make those changes reflect on GitHub.com
+    </h3>
+    
+
+    <h2>2. Git Add</h2>
+    <p>The 'git add' command is used to stage changes you’ve made to your files so that they can be committed to the repository. You need to add files before committing them.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">git add .</div>
+            </div>
+        </div>
+    </div>
+    <p>The period ('.') stages all modified files in the current directory and its subdirectories. You can also add specific files like this:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">3</div>
+            </div>
+            <div class="code">
+                <div class="line">git add index.html</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>3. Git Commit</h2>
+    <p>The 'git commit' command is used to save your staged changes to the local repository. You should always include a message explaining what changes you’ve made.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">4</div>
+            </div>
+            <div class="code">
+                <div class="line">git commit -m "Added new feature"</div>
+            </div>
+        </div>
+    </div>
+    <p>The <code>-m</code> flag allows you to add a commit message inline. This helps you and others understand what changes were made in that commit.</p>
+
+    <h2>4. Git Push</h2>
+    <p>The 'git push' command uploads your local changes to the remote repository (like GitHub). This is how you share your changes with others on the project.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">5</div>
+            </div>
+            <div class="code">
+                <div class="line">git push</div>
+            </div>
+        </div>
+    </div>
+    <p>Here, <code>origin</code> refers to the default name for the remote repository, and <code>main</code> is the branch you are pushing to. If you're working on a different branch, you can replace <code>main</code> with your branch's name.</p>
+
+    <h5>Here’s a brief recap:</h5>
+    <p><strong>git clone</strong> - Create a copy of a repository</p>
+    <p><strong>git add</strong> - Stage changes for commit</p>
+    <p><strong>git commit</strong> - Save your changes locally (takes a snapshot)</p>
+    <p><strong>git push</strong> - Upload changes to the remote repository</p>
+
+    <h5>Once you push, your changes are reflected in the remote repository (Github.com)</h5>
+
+</section>

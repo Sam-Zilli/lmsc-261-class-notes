@@ -2,7 +2,7 @@
     <h1>Common Errors</h1>
     <hr>
 
-    <h2>Common Terminal Errors</h2>
+    <h2>Common Terminal Errors</h2>  
 
     <h3>1. <code>cd: no such file or directory</code> - Directory Not Found</h3>
     <p>This error occurs when you try to navigate to a directory that doesn't exist.</p>
@@ -17,7 +17,52 @@
     <p><strong>Explanation:</strong> The error occurs because the directory <code>folderThree</code> does not exist in the current path, so the system is unable to navigate to it.</p>
     <br>
     <br>
-    <h3>Fix:</h3>
-    <p>Make sure the directory or file exists by running <code>ls</code> to check the available directories. Either fix the spelling to match a directory that exists where you are, OR change your location.
+    <h3>Possible Fixes:</h3>
+    <ol>
+        <li>Check the spelling of the directory you are trying to navigate to.</li>
+        <li>Use the <code>ls</code> command to list the directories and files in the current location.</li>
+        <li>Change to a different directory that exists.</li>
+    </ol>
     <br>
+
+    <hr>
+
+    <h3>2. <code>zsh: command not found:</code> - Command Not Found</h3>
+    <p>This error occurs when you don't use a valid command.</p>
+    <p><strong>Example:</strong></p>
+    <div class="code-container">
+            <div class="console">
+                <div class="line prompt">$ example.js</div>
+                <div class="line error">zsh: command not found: example.js</div>
+            </div>
+    </div>
+    <br>
+    <h3>Possible Fixes:</h3>
+    <ol>
+        <li>Did you forget the command before the file name? For example: <code>$ node example.js</code></li>
+        <li>Check the spelling of the command. Find common commands <a href="#/terminal/terminal-commands">here.</a></li>
+    </ol>
+    <br>
+
+    <hr>
+
+    <h3>3. <code>fatal: not a git repository</code> - Not a Git Repo</h3>
+    <p>This error occurs when you try to use a git command in a non-git directory</p>
+    <p><strong>Example:</strong></p>
+    <div class="code-container">
+            <div class="console">
+                <div class="line prompt">$ git add example.js</div>
+                <div class="line error">fatal: not a git repository (or any of the parent directories): .git</div>
+            </div>
+    </div>
+    <br>
+    <h3>Possible Fixes:</h3>
+    <ol>
+        <li>Are you in a git repo? Run <code>$ ls -a</code>to check if there is a .git file</li>
+    </ol>
+    <br>
+
+    <hr>
+
+
 </section>

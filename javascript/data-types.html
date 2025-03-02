@@ -28,8 +28,9 @@
 
 
         <h2>Numbers</h2>
-            <p>Integers (whole numebrs like 1,2,3,4,-35) and Floating Point (numbers with decimal places like 3.1415)</p>
-            <p>Some special values that won't be relevent to our class (such as Infinity and -Infinity)</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">MDN Number Documentation</a>
+            <p>Integers (whole numbers like 1,2,3,4,-35) and Floating Point (numbers with decimal places like 3.1415)</p>
+            <!-- <p>Some special values that won't be relevent to our class (such as Infinity and -Infinity)</p> -->
             <p>Numbers are written without quotes around them, like this...</p>
             <div class="code-container">
                 <div class="code-wrapper">
@@ -72,8 +73,8 @@
             </div>
 
             <h2>Strings</h2>
-                <p>Strings represent text and are written inside single quotes, double quotes, or backticks (template literals).</p>
-                <p>Here’s an example of defining a string:</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">MDN String Documentation</a>
+                <p>Strings represent text and are written inside single quotes or double quotes.</p>
                 <div class="code-container">
                     <div class="code-wrapper">
                         <div class="line-numbers">
@@ -84,8 +85,8 @@
                         </div>
                     </div>
                 </div>
-                <p>Strings can be concatenated with the <code>+</code> operator:</p>
-                <div class="code-container">
+
+                <!-- <div class="code-container">
                     <div class="code-wrapper">
                         <div class="line-numbers">
                             <div class="line">1</div>
@@ -94,11 +95,12 @@
                             <div class="line">let greeting = "Hello, " + "World!";</div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="subsection">
                     <h4>Operations</h4>
                     <p>You can use operators on Strings, but they behave differently than Numbers.</p>
+                    <p>Strings can be concatenated with the <code>+</code> operator:</p>
                     <p>Look what happens when you use the + operator with the String x and a Number 2</p>
                     <br/>
                     <div class="code-container">
@@ -123,6 +125,7 @@
                 </div>
                 
                 <h2>Booleans</h2>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">MDN Boolean Documentation</a>
                 <p>Booleans represent a truth value and can either be <code>true</code> or <code>false</code>.</p>
                 <p>Booleans are commonly used in conditional statements:</p>
                 <div class="code-container">
@@ -136,7 +139,7 @@
                         <div class="code">
                             <div class="line">let isRaining = true;</div>
                             <div class="line">if (isRaining) {</div>
-                            <div class="line">    console.log("Take an umbrella!");</div>
+                            <div class="line indent">console.log("Take an umbrella!");</div>
                             <div class="line">}</div>
                         </div>
                     </div>
@@ -149,6 +152,7 @@
                 </div>
 
                 <h2>Undefined</h2>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Undefined">MDN Undefined Documentation</a>
                 <p>When a variable is declared but not assigned a value, it has the value <code>undefined</code>.</p>
                 <div class="code-container">
                     <div class="code-wrapper">
@@ -161,7 +165,7 @@
                             <div class="line">console.log(x);</div>
                         </div>
                     </div>
-                    <div class="console">
+                    <div class="console">s
                         <div class="line">
                             <p class="line">undefined</p>
                             <p class="last-line"> </p>
@@ -170,6 +174,7 @@
                 </div>
 
                 <h2>Arrays</h2>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">MDN Array Documentation</a>
                 <p>Arrays are used to store multiple values in a single variable. An array is an ordered list of elements enclosed in square brackets <code>[]</code>, with elements separated by commas.</p>
                 <br>
                 <p>Each element (item) in the Array does NOT need to be the same data type.</p>
@@ -200,6 +205,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <p>You can access individual elements of an array using their index (starting from 0), as shown in the example above.</p>
 
                 <div class="subsection">
@@ -226,7 +232,6 @@
                                 <p class="last-line"> </p>
                             </div>
                         </div>
-
                     </div>
                         
                     <br>
@@ -354,6 +359,7 @@
                     <br>
                     <h5>Iterate through the array with <code>forEach()</code></h5>
                     <br>
+
                     <div class="code-container">
                         <div class="code-wrapper">
                             <div class="line-numbers">
@@ -365,7 +371,7 @@
                             <div class="code">
                                 <div class="line">let myArr = ['apple', 'banana', 'cherry'];</div>
                                 <div class="line">myArr.forEach(function(item) {</div>
-                                <div class="line" style="padding-left: 40px;">console.log(item);</div>
+                                <div class="line indent">console.log(item);</div>
                                 <div class="line">});</div>
                             </div>
                         </div>
@@ -376,7 +382,29 @@
                                 <p class="line">cherry</p>
                                 <p class="last-line"> </p>
                             </div>
+                        </div>
                     </div>
+                    <br>
+
+                    <div class="code-container">
+                        <div class="code-wrapper">
+                            <div class="line-numbers">
+                                <div class="line">1</div>
+                                <div class="line">2</div>
+                            </div>
+                            <div class="code">
+                                <div class="line">let myArr = ['foot', 'base', 'kick'];</div>
+                                <div class="line">myArr.forEach(word => console.log(word + "ball"))</div>
+                            </div>
+                        </div>
+                        <div class="console">
+                            <div class="line">
+                                <p class="line">football</p>
+                                <p class="line">baseball</p>
+                                <p class="line">kickball</p>
+                                <p class="last-line"> </p>
+                            </div>
+                        </div>
 
 
                 </div>

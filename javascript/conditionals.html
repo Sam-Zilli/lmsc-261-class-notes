@@ -1,0 +1,156 @@
+<section id="javascript-conditionals">
+    <h1>JavaScript Conditionals</h1>
+    <hr>
+    <h2>What are Conditionals?</h2>
+    <p>Conditionals in JavaScript allow you to make decisions in your code based on whether a certain condition is true or false. Using conditionals, you can execute different blocks of code depending on the result of these conditions.</p>
+
+    <h2>The <code>if</code> Statement</h2>
+    <p>The most basic form of conditional is the <code>if</code> statement. It checks if a condition is true, and if it is, it executes the code inside the block.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let age = 18;</div>
+                <div class="line">if (age >= 18) {</div>
+                <div class="line indent">  console.log("You are an adult.");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+
+    <p>In this example, if <code>age</code> is greater than or equal to 18, the message "You are an adult." will be displayed in the console.</p>
+
+    <h2>The <code>else</code> Statement</h2>
+    <p>Sometimes, you want to do something if a condition is false. You can use the <code>else</code> statement to specify what to do when the <code>if</code> condition is false.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">let age = 16;</div>
+                <div class="line">if (age >= 18) {</div>
+                <div class="line indent">  console.log("You are an adult.");</div>
+                <div class="line">} else {</div>
+                <div class="line indent">  console.log("You are a minor.");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+
+    <p>In this example, since <code>age</code> is less than 18, the message "You are a minor." will be displayed in the console.</p>
+
+    <h2>The <code>else if</code> Statement</h2>
+    <p>If you need to check multiple conditions, you can use the <code>else if</code> statement. This allows you to test more than two conditions in a sequence.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">3</div>
+            </div>
+            <div class="code">
+                <div class="line">let age = 70;</div>
+                <div class="line">if (age < 18) {</div>
+                <div class="line indent">  console.log("You are a minor.");</div>
+                <div class="line">} else if (age >= 18 && age <= 65) {</div>
+                <div class="line indent">  console.log("You are an adult.");</div>
+                <div class="line">} else {</div>
+                <div class="line indent">  console.log("You are a senior.");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+
+    <p>Here, the condition checks for three cases: <code>age</code> less than 18, between 18 and 65, and over 65. Since <code>age</code> is 70, the message "You are a senior." will be displayed.</p>
+
+    <h2>Logical Operators in Conditionals</h2>
+    <p>You can combine multiple conditions in an <code>if</code>, <code>else if</code>, or <code>else</code> block using logical operators.</p>
+
+    <h3>The <code>&&</code> (AND) Operator</h3>
+    <p>The <code>&&</code> operator checks if both conditions are true:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">4</div>
+            </div>
+            <div class="code">
+                <div class="line">let age = 25;</div>
+                <div class="line">let hasPermission = true;</div>
+                <div class="line">if (age >= 18 && hasPermission) {</div>
+                <div class="line indent">  console.log("You can access this area.");</div>
+                <div class="line">} else {</div>
+                <div class="line indent">  console.log("Access denied.");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+
+    <p>This will check if the person is both over 18 and has permission. If both conditions are true, the message "You can access this area." will be displayed.</p>
+
+    <h3>The <code>||</code> (OR) Operator</h3>
+    <p>The <code>||</code> operator checks if at least one condition is true:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">5</div>
+            </div>
+            <div class="code">
+                <div class="line">let age = 16;</div>
+                <div class="line">let hasPermission = true;</div>
+                <div class="line">if (age >= 18 || hasPermission) {</div>
+                <div class="line indent">  console.log("You can access this area.");</div>
+                <div class="line">} else {</div>
+                <div class="line indent">  console.log("Access denied.");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+
+    <p>Since <code>hasPermission</code> is true, the message "You can access this area." will be displayed, even though <code>age</code> is less than 18.</p>
+
+    <h2>Short-circuiting in Logical Operators</h2>
+    <p>Logical operators in JavaScript also "short-circuit," meaning they stop evaluating as soon as the result is determined:</p>
+    <ul>
+        <li>With <code>&&</code>, if the first condition is false, the second condition won’t be evaluated.</li>
+        <li>With <code>||</code>, if the first condition is true, the second condition won’t be evaluated.</li>
+    </ul>
+
+    <h2>Switch Statement</h2>
+    <p>The <code>switch</code> statement is an alternative to using multiple <code>else if</code> statements. It's used when you have many possible conditions based on the value of a single variable.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">6</div>
+            </div>
+            <div class="code">
+                <div class="line">let day = 3;</div>
+                <div class="line">switch (day) {</div>
+                <div class="line indent">case 1:</div>
+                <div class="line double-indent">console.log("Monday");</div>
+                <div class="line double-indent">break;</div>
+                <div class="line indent">case 2:</div>
+                <div class="line double-indent">console.log("Tuesday");</div>
+                <div class="line double-indent">break;</div>
+                <div class="line indent">case 3:</div>
+                <div class="line double-indent">console.log("Wednesday");</div>
+                <div class="line double-indent">break;</div>
+                <div class="line indent">default:</div>
+                <div class="line double-indent">console.log("Invalid day");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+
+    <p>In this example, the value of <code>day</code> is 3, so the message "Wednesday" will be displayed. If <code>day</code> was anything else, the default case would be executed.</p>
+
+    <h3>Summary of Key Points</h3>
+    <ul>
+        <li>The <code>if</code> statement allows you to test conditions and execute code accordingly.</li>
+        <li>The <code>else</code> and <code>else if</code> statements help you handle multiple conditions.</li>
+        <li>Logical operators like <code>&&</code> (AND) and <code>||</code> (OR) let you combine multiple conditions.</li>
+        <li>The <code>switch</code> statement provides an alternative way to handle multiple conditions based on one variable.</li>
+    </ul>
+
+    <h5>Conditionals are essential for controlling the flow of your JavaScript program based on specific conditions!</h5>
+</section>

@@ -36,7 +36,7 @@
     
     <!-- Main Application JS -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Fetch and load sidebar content dynamically
             fetch('sidebar/sidebar.html')
                 .then(response => response.text())
@@ -47,107 +47,59 @@
                 .catch(error => {
                     console.error('Error loading sidebar:', error);
                 });
-
+    
             // Function to load content based on the current URL hash
             function loadContent() {
                 const contentPlaceholder = document.querySelector('.main-content'); // Select the main-content div
                 const hash = window.location.hash;
-
+    
                 // Clear the content placeholder
                 contentPlaceholder.innerHTML = '';
-
-                switch (hash) {
-                    case '#/terminal/common-terminal-errors':
-                        fetch('terminal/common-terminal-errors.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                contentPlaceholder.innerHTML = data;  // Inject the content of common-terminal-errors.html into the main-content div
-                            })
-                            .catch(error => {
-                                console.error('Error loading Common Terminal Errors Page:', error);
-                                contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
-                            });
-                            break;
-
-                    case '#/terminal/terminal-commands':
-                        fetch('terminal/terminal-commands.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                contentPlaceholder.innerHTML = data;  // Inject the content of terminal-commands.html into the main-content div
-                            })
-                            .catch(error => {
-                                console.error('Error loading Terminal Commands Page:', error);
-                                contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
-                            });
-                            break;
-
-                    case '#/terminal/file-paths':
-                        fetch('terminal/file-paths.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                contentPlaceholder.innerHTML = data;  // Inject the content of file-paths.html into the main-content div
-                            })
-                            .catch(error => {
-                                console.error('Error loading Terminal Commands Page:', error);
-                                contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
-                            });
-                            break;
-
-                    
-
-                    case '#/javascript/variables':
-                        fetch('javascript/variables.html')
+    
+                const routes = {
+                    '#/terminal/common-terminal-errors': 'terminal/common-terminal-errors.html',
+                    '#/terminal/terminal-commands': 'terminal/terminal-commands.html',
+                    '#/terminal/file-paths': 'terminal/file-paths.html',
+                    '#/javascript/variables': 'javascript/variables.html',
+                    '#/javascript/data-types': 'javascript/data-types.html',
+                    '#/javascript/conditionals': 'javascript/conditionals.html',
+                    '#/javascript/functions': 'javascript/functions.html',
+                    '#/terminal/clone-add-commit-push': 'terminal/clone-add-commit-push.html'
+                };
+    
+                // Function to handle the fetch logic
+                function fetchContent(url) {
+                    fetch(url)
                         .then(response => response.text())
                         .then(data => {
-                            contentPlaceholder.innerHTML = data; // Inject the content of variables.html into the main-content div
+                            contentPlaceholder.innerHTML = data; // Inject the content into the main-content div
                         })
                         .catch(error => {
-                            console.error('Error loading JavaScript Variables Section:', error);
+                            console.error(`Error loading the content from ${url}:`, error);
                             contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
                         });
-                        break;
-
-                    case '#/javascript/data-types-overview':
-                        fetch('javascript/data-types-overview.html')
-                            .then(response => response.text())
-                            .then(data => {
-                                contentPlaceholder.innerHTML = data; // Inject the content of data-types.html into the main-content div
-                            })
-                            .catch(error => {
-                                console.error('Error loading JavaScript Data Types Section:', error);
-                                contentPlaceholder.innerHTML = '<p>Error loading the content. Please try again later.</p>';
-                            });
-                            break;
-
-
-                    // case '#/html-css/section1':
-                    //     contentPlaceholder.innerHTML = `
-                    //         <h1>HTML & CSS Section 3.1</h1>
-                    //         <p>This section introduces the basics of HTML and CSS.</p>
-                    //     `;
-                    //     break;
-                    // case '#/html-css/section2':
-                    //     contentPlaceholder.innerHTML = `
-                    //         <h1>HTML & CSS Section 3.2</h1>
-                    //         <p>This section dives deeper into advanced HTML and CSS.</p>
-                    //     `;
-                    //     break;
-
-                    default:
-                        contentPlaceholder.innerHTML = `
-                            <h1>Welcome</h1>
-                            <p>Select a topic from the sidebar to begin.</p>
-                        `;
+                }
+    
+                // Check if the hash matches any route
+                if (routes[hash]) {
+                    fetchContent(routes[hash]);
+                } else {
+                    // Default content when no route matches
+                    contentPlaceholder.innerHTML = `
+                        <h1>Welcome</h1>
+                        <p>Select a topic from the sidebar to begin.</p>
+                    `;
                 }
             }
-
+    
             // Listen to URL hash changes and load new content dynamically
             window.addEventListener('hashchange', loadContent);
-
+    
             // Initial content load based on the current hash
             loadContent();
         });
     </script>
+    
 
     <!-- Bootstrap JS (and Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>

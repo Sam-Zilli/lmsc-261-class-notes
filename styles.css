@@ -1,3 +1,11 @@
+.indent {
+    padding-left: 40px;
+}
+
+.double-indent {
+    padding-left: 80px;
+}
+
 /* Container for both code and terminal output */
 .code-container {
     width: 100%;
