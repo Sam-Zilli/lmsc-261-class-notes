@@ -1,3 +1,13 @@
+/* Disable text selection across the entire website */
+* {
+    -webkit-user-select: none; /* Disable selection in Webkit browsers */
+    -moz-user-select: none; /* Disable selection in Firefox */
+    -ms-user-select: none; /* Disable selection in IE/Edge */
+    user-select: none; /* Disable selection */
+}
+
+
+
 .indent {
     padding-left: 40px;
 }

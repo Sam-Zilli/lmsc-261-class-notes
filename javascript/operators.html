@@ -1,0 +1,222 @@
+<section id="javascript-operators">
+    <h1>JavaScript Operators</h1>
+    <hr>
+
+    <h2>What Are Operators?</h2>
+    <p>Operators in JavaScript are special symbols used to perform operations on variables and values. They are fundamental to JavaScript programming and can be used to perform arithmetic, compare values, assign values, and more.</p>
+
+    <!-- <h2>Types of Operators in JavaScript</h2>
+    <p>JavaScript has several types of operators, including:</p>
+    <ul>
+        <li><strong>Arithmetic Operators</strong></li>
+        <li><strong>Assignment Operators</strong></li>
+        <li><strong>Comparison Operators</strong></li>
+        <li><strong>Logical Operators</strong></li>
+        <li><strong>Bitwise Operators</strong></li>
+    </ul> -->
+
+    <br>
+    <h3>Arithmetic Operators</h3>
+    <p>Arithmetic operators are used to perform basic mathematical operations on numbers:</p>
+    <ul>
+        <li><code>+</code> (Addition)</li>
+        <li><code>-</code> (Subtraction)</li>
+        <li><code>*</code> (Multiplication)</li>
+        <li><code>/</code> (Division)</li>
+        <li><code>%</code> (Modulo - Remainder)</li>
+        <li><code>++</code> (Increment)</li>
+        <li><code>--</code> (Decrement)</li>
+    </ul>
+    
+    <h5>Example:</h5>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+                <div class="line">2</div>
+                <div class="line">3</div>
+                <div class="line">4</div>
+                <div class="line">5</div>
+                <div class="line">6</div>
+                <div class="line">7</div>
+            </div>
+            <div class="code">
+                <div class="line">let a = 5;</div>
+                <div class="line">let b = 2;</div>
+                <div class="line">console.log(a + b); // 7</div>
+                <div class="line">console.log(a - b); // 3</div>
+                <div class="line">console.log(a * b); // 10</div>
+                <div class="line">console.log(a / b); // 2.5</div>
+                <div class="line">console.log(a % b); // 1</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <h3>Assignment Operators</h3>
+    <p>Assignment operators are used to assign values to variables. The most common assignment operator is the equals sign (<code>=</code>), but there are also compound assignment operators for shorthand operations:</p>
+    <ul>
+        <li><code>=</code> (Simple Assignment)</li>
+        <li><code>+=</code> (Addition Assignment)</li>
+        <li><code>-=</code> (Subtraction Assignment)</li>
+        <li><code>*=</code> (Multiplication Assignment)</li>
+        <li><code>/=</code> (Division Assignment)</li>
+        <li><code>%=</code> (Modulo Assignment)</li>
+    </ul>
+
+    <h5>Example:</h5>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+                <div class="line">2</div>
+                <div class="line">3</div>
+                <div class="line">4</div>
+                <div class="line">5</div>
+            </div>
+            <div class="code">
+                <div class="line">let x = 5;</div>
+                <div class="line">x += 3; // x = x + 3;</div>
+                <div class="line">console.log(x); // 8</div>
+                <div class="line">x *= 2; // x = x * 2;</div>
+                <div class="line">console.log(x); // 16</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <h3>Assignment vs. Equality</h3>
+    <p>It's important to distinguish between the assignment operator (<code>=</code>) and equality operators (<code>==</code> and <code>===</code>), as they may look similar but serve different purposes.</p>
+
+    <h4>The Assignment Operator (<code>=</code>)</h4>
+    <p>The <code>=</code> operator is used to assign a value to a variable:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">let x = 5;</div>
+                <div class="line">console.log(x); // 5</div>
+            </div>
+        </div>
+    </div>
+
+    <p>In this example, the value <code>5</code> is assigned to the variable <code>x</code> using the assignment operator <code>=</code>.</p>
+
+    <h4>The Equality Operators</h4>
+    <p>Equality operators are used to compare two values. There are two main equality operators:</p>
+    <ul>
+        <li><code>==</code> (Loose Equality): Compares two values for equality, performing type coercion if needed.</li>
+        <li><code>===</code> (Strict Equality): Compares both the value and the type, without performing type coercion.</li>
+    </ul>
+
+    <h5>Loose Equality (<code>==</code>):</h5>
+    <p>The <code>==</code> operator compares two values and performs type coercion if necessary:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+                <div class="line">2</div>
+                <div class="line">3</div>
+            </div>
+            <div class="code">
+                <div class="line">let a = "5";</div>
+                <div class="line">let b = 5;</div>
+                <div class="line">console.log(a == b); // true</div>
+            </div>
+        </div>
+    </div>
+
+    <p>Here, the string <code>"5"</code> is coerced into the number <code>5</code>, so the comparison is <code>true</code>.</p>
+
+    <h5>Strict Equality (<code>===</code>):</h5>
+    <p>The <code>===</code> operator does not perform type coercion and checks both the value and the type:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">5</div>
+            </div>
+            <div class="code">
+                <div class="line">let a = "5";</div>
+                <div class="line">let b = 5;</div>
+                <div class="line">console.log(a === b); // false</div>
+            </div>
+        </div>
+    </div>
+
+    <p>In this case, the comparison is <code>false</code> because the types are different: one is a string and the other is a number.</p>
+
+    <br>
+    <h3>Comparison Operators</h3>
+    <p>Comparison operators are used to compare two values and return a boolean value (<code>true</code> or <code>false</code>). Common comparison operators include:</p>
+    <ul>
+        <li><code>==</code> (Equal to)</li>
+        <li><code>!=</code> (Not equal to)</li>
+        <li><code>></code> (Greater than)</li>
+        <li><code><</code> (Less than)</li>
+        <li><code>>=</code> (Greater than or equal to)</li>
+        <li><code><=</code> (Less than or equal to)</li>
+    </ul>
+
+    <h5>Example:</h5>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+                <div class="line">2</div>
+                <div class="line">3</div>
+                <div class="line">4</div>
+                <div class="line">5</div>
+            </div>
+            <div class="code">
+                <div class="line">let x = 10;</div>
+                <div class="line">let y = 20;</div>
+                <div class="line">console.log(x == y); // false</div>
+                <div class="line">console.log(x < y); // true</div>
+                <div class="line">console.log(x >= y); // false</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <h3>Logical Operators</h3>
+    <p>Logical operators are used to combine multiple conditions:</p>
+    <ul>
+        <li><code>&&</code> (AND)</li>
+        <li><code>||</code> (OR)</li>
+        <li><code>!</code> (NOT)</li>
+    </ul>
+
+    <h5>Example:</h5>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+                <div class="line">2</div>
+                <div class="line">3</div>
+                <div class="line">4</div>
+                <div class="line">5</div>
+            </div>
+            <div class="code">
+                <div class="line">let a = true;</div>
+                <div class="line">let b = false;</div>
+                <div class="line">console.log(a && b); // false</div>
+                <div class="line">console.log(a || b); // true</div>
+                <div class="line">console.log(!a); // false</div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <h2>Summary of Operators</h2>
+    <ul>
+        <li><strong>Arithmetic operators</strong> perform mathematical operations.</li>
+        <li><strong>Assignment operators</strong> assign values to variables. Be careful with <code>=</code> for assignment vs. <code>==</code> and <code>===</code> for equality comparisons.</li>
+        <li><strong>Comparison operators</strong> are used to compare values and return a boolean result.</li>
+        <li><strong>Logical operators</strong> combine conditions for decision making.</li>
+    </ul>
+
+    <h5>Understanding operators is key to mastering JavaScript and creating efficient and readable code!</h5>
+</section>
