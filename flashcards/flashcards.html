@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Flashcards</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS for Flashcards -->
+    <link rel="stylesheet" href="../styles/flashcards.css">
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">JavaScript Flashcards</h1>
+        <div id="flashcard-container" class="flashcard-container mt-4">
+            <!-- Flashcards will be displayed here -->
+        </div>
+        <div class="d-flex justify-content-between mt-4">
+            <button id="next-btn" class="btn btn-primary">Next Flashcard</button>
+            <button id="reset-btn" class="btn btn-secondary">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const flashcardDeck = [
+                { question: 'What is the capital of France?', answer: 'Paris' },
+                { question: 'What is 2 + 2?', answer: '4' },
+                { question: 'What is the largest planet in our solar system?', answer: 'Jupiter' },
+                { question: 'Who wrote "To Kill a Mockingbird"?', answer: 'Harper Lee' },
+                { question: 'What is the square root of 16?', answer: '4' }
+            ];
+
+            let currentCardIndex = 0;
+
+            const flashcardContainer = document.getElementById('flashcard-container');
+            const nextButton = document.getElementById('next-btn');
+            const resetButton = document.getElementById('reset-btn');
+
+            // Function to display a flashcard
+            function displayFlashcard() {
+                const currentFlashcard = flashcardDeck[currentCardIndex];
+                flashcardContainer.innerHTML = `
+                    <div class="flashcard">
+                        <h2 class="flashcard-question">${currentFlashcard.question}</h2>
+                        <p class="flashcard-answer" style="display: none;">${currentFlashcard.answer}</p>
+                    </div>
+                `;
+                
+                const questionElement = flashcardContainer.querySelector('.flashcard-question');
+                const answerElement = flashcardContainer.querySelector('.flashcard-answer');
+                questionElement.addEventListener('click', () => {
+                    answerElement.style.display = answerElement.style.display === 'none' ? 'block' : 'none';
+                });
+            }
+
+            // Function to load the next flashcard
+            function loadNextFlashcard() {
+                currentCardIndex = (currentCardIndex + 1) % flashcardDeck.length; // Loop back to first card when reaching end
+                displayFlashcard();
+            }
+
+            // Reset the flashcards
+            resetButton.addEventListener('click', function () {
+                currentCardIndex = 0;
+                displayFlashcard();
+            });
+
+            // Display the first flashcard
+            displayFlashcard();
+
+            // Set up the "Next Flashcard" button
+            nextButton.addEventListener('click', loadNextFlashcard);
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
