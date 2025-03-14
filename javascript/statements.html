@@ -1,0 +1,118 @@
+<section id="statements-in-programming">
+    <h1>Statements</h1>
+    <hr>
+    
+    <h2>What are Statements?</h2>
+    <p>A statement is a complete instruction in a program that performs an action. Unlike expressions, statements do not return a value but instead control the flow of the program.</p>
+
+    <h2>1. Types of Statements</h2>
+    <p>Statements can be classified based on their functionality and the actions they perform. Below are the most common types:</p>
+    
+    <h3>Declaration Statements</h3>
+    <p>A declaration statement is used to declare variables or constants. These statements define the variable and optionally assign it a value.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let x = 10;</div>
+                <div class="line">const PI = 3.14;</div>
+            </div>
+        </div>
+    </div>
+    <p>In this case, <code>let x = 10;</code> declares a variable <code>x</code> and assigns it the value <code>10</code>, while <code>const PI = 3.14;</code> declares a constant <code>PI</code> with a value of <code>3.14</code>.</p>
+
+    <h3>Conditional Statements</h3>
+    <p>Conditional statements allow the execution of code based on whether a condition evaluates to true or false. These statements control the flow of execution.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">if (x > 5) {</div>
+                <div class="line">    console.log("x is greater than 5");</div>
+                <div class="line">} else {</div>
+                <div class="line">    console.log("x is less than or equal to 5");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+    <p>The <code>if</code> statement checks if the value of <code>x</code> is greater than 5 and executes the corresponding code block based on the result.</p>
+
+    <h3>Loop Statements</h3>
+    <p>Loop statements repeatedly execute a block of code as long as a condition is true. These are used to automate repetitive tasks.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">3</div>
+            </div>
+            <div class="code">
+                <div class="line">for (let i = 0; i < 5; i++) {</div>
+                <div class="line">    console.log(i);</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+    <p>The <code>for</code> loop here runs 5 times, printing the values of <code>i</code> from 0 to 4 to the console.</p>
+
+    <h2>2. How Are Statements Used in Code?</h2>
+    <p>Statements control the flow of the program and are integral to performing tasks. They are used in combination with expressions to execute actions in the program.</p>
+
+    <h3>In Assignments</h3>
+    <p>Statements are used to assign values to variables or constants. These assignments are usually simple expressions that evaluate to a value and then get assigned to a variable.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">4</div>
+            </div>
+            <div class="code">
+                <div class="line">let result = 10 + 5;</div>
+            </div>
+        </div>
+    </div>
+    <p>The statement <code>let result = 10 + 5;</code> assigns the value <code>15</code> to the variable <code>result</code>.</p>
+
+    <h3>In Loops</h3>
+    <p>Loop statements execute a block of code multiple times, making them useful for repetitive tasks, such as iterating through arrays or performing calculations.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">5</div>
+            </div>
+            <div class="code">
+                <div class="line">while (x > 0) {</div>
+                <div class="line">    x--;</div>
+                <div class="line">    console.log(x);</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+    <p>The <code>while</code> loop continues to execute as long as <code>x</code> is greater than 0, decrementing its value and printing it at each iteration.</p>
+
+    <h2>3. Control Flow with Statements</h2>
+    <p>Statements are the foundation of controlling the program flow. Without them, the program wouldn't know which blocks of code to execute under different conditions.</p>
+
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">6</div>
+            </div>
+            <div class="code">
+                <div class="line">if (x % 2 === 0) {</div>
+                <div class="line">    console.log("x is even");</div>
+                <div class="line">} else {</div>
+                <div class="line">    console.log("x is odd");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+    <p>This <code>if-else</code> statement checks if <code>x</code> is even or odd and prints the result to the console.</p>
+
+    <h5>Quick Recap:</h5>
+    <p><strong>Declaration Statements:</strong> Declare variables and constants</p>
+    <p><strong>Conditional Statements:</strong> Control the flow of execution based on conditions</p>
+    <p><strong>Loop Statements:</strong> Repeatedly execute code while a condition is true</p>
+    <p><strong>Control Flow:</strong> Statements determine the flow of execution in the program</p>
+</section>

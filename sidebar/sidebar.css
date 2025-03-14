@@ -3,12 +3,13 @@
     position: fixed;  /* Fix the sidebar to the left */
     top: 0;
     left: 0;
-    height: 100vh;  /* Full height */
+    height: 100vh;  /* Full height of the viewport */
     width: 250px;  /* Set the sidebar width */
     background-color: #343a40;
     color: #fff;
     padding-top: 20px;
     z-index: 1000;  /* Ensure it stays on top of other elements */
+    overflow-y: auto;  /* Enable scrolling when content exceeds viewport height */
 }
 
 /* Sidebar Navigation */
@@ -50,6 +51,7 @@
         position: static;  /* Allow sidebar to scroll with content on smaller screens */
         width: 100%;  /* Make sidebar full-width */
         height: auto;  /* Adjust height for smaller screens */
+        overflow-y: visible;  /* Disable scrolling on smaller screens */
     }
     .main-content {
         margin-left: 0;  /* Reset left margin for smaller screens */

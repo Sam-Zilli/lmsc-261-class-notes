@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             // Insert the fetched sidebar HTML into the container
             document.getElementById('sidebar-container').innerHTML = data;
+            console.log('Current Hash:', window.location.hash); 
+
         })
         .catch(error => {
             console.error('Error loading sidebar:', error);
