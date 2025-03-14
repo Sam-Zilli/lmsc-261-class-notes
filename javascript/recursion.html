@@ -1,0 +1,114 @@
+<section id="javascript-recursion">
+    <h1>JavaScript Recursion</h1>
+    <hr>
+    <h2>What is Recursion?</h2>
+    <p>Recursion in JavaScript is a process where a function calls itself directly or indirectly in order to solve a problem. Recursion is often used to solve problems that can be broken down into smaller, similar sub-problems. A recursive function typically has a base case that terminates the recursion and prevents it from running indefinitely.</p>
+
+    <h2>Basic Structure of a Recursive Function</h2>
+    <p>A recursive function must have two main parts:</p>
+    <ul>
+        <li>The <strong>base case</strong> that ends the recursion.</li>
+        <li>The <strong>recursive case</strong> where the function calls itself with a modified argument.</li>
+    </ul>
+
+    <p>Here is a simple example of a recursive function that calculates the factorial of a number:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">function factorial(n) {</div>
+                <div class="line indent">  if (n <= 1) {</div>
+                <div class="line indent">    return 1;</div>
+                <div class="line indent">  }</div>
+                <div class="line indent">  return n * factorial(n - 1);</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+
+    <p>In this example, the function <code>factorial</code> calls itself with the argument <code>n - 1</code>, and the recursion continues until <code>n <= 1</code> (the base case), at which point it returns 1 and the recursion terminates.</p>
+
+    <h2>How Does Recursion Work?</h2>
+    <p>Let’s see how the recursion works step by step when we call <code>factorial(4)</code>:</p>
+    <ul>
+        <li><code>factorial(4)</code> returns <code>4 * factorial(3)</code></li>
+        <li><code>factorial(3)</code> returns <code>3 * factorial(2)</code></li>
+        <li><code>factorial(2)</code> returns <code>2 * factorial(1)</code></li>
+        <li><code>factorial(1)</code> hits the base case and returns <code>1</code></li>
+    </ul>
+    <p>Now, the function starts returning values back up the chain:</p>
+    <ul>
+        <li><code>factorial(2)</code> returns <code>2 * 1 = 2</code></li>
+        <li><code>factorial(3)</code> returns <code>3 * 2 = 6</code></li>
+        <li><code>factorial(4)</code> returns <code>4 * 6 = 24</code></li>
+    </ul>
+    <p>The final result is <strong>24</strong>, which is the factorial of 4.</p>
+
+    <h2>Common Use Cases for Recursion</h2>
+    <p>Recursion is often used in scenarios where a problem can be divided into smaller sub-problems of the same type. Some common use cases for recursion include:</p>
+    <ul>
+        <li>Traversing hierarchical structures (e.g., trees and directories)</li>
+        <li>Generating combinations and permutations of items</li>
+        <li>Solving mathematical problems like factorials, Fibonacci numbers, and power calculations</li>
+        <li>Searching and sorting algorithms (e.g., quicksort and mergesort)</li>
+    </ul>
+
+    <h2>Example 2: Fibonacci Sequence</h2>
+    <p>Another common example of recursion is calculating the Fibonacci sequence, where each number is the sum of the two preceding ones.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">function fibonacci(n) {</div>
+                <div class="line indent">  if (n <= 1) {</div>
+                <div class="line indent">    return n;</div>
+                <div class="line indent">  }</div>
+                <div class="line indent">  return fibonacci(n - 1) + fibonacci(n - 2);</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+
+    <p>In this case, <code>fibonacci(n)</code> returns the sum of the previous two Fibonacci numbers, and the recursion continues until <code>n <= 1</code> (base case).</p>
+
+    <h3>Example: fibonacci(5)</h3>
+    <p>If we call <code>fibonacci(5)</code>, the following steps happen:</p>
+    <ul>
+        <li><code>fibonacci(5)</code> returns <code>fibonacci(4) + fibonacci(3)</code></li>
+        <li><code>fibonacci(4)</code> returns <code>fibonacci(3) + fibonacci(2)</code></li>
+        <li><code>fibonacci(3)</code> returns <code>fibonacci(2) + fibonacci(1)</code></li>
+        <li><code>fibonacci(2)</code> returns <code>fibonacci(1) + fibonacci(0)</code></li>
+    </ul>
+    <p>The final result will be <strong>5</strong> for <code>fibonacci(5)</code>.</p>
+
+    <h2>Potential Pitfalls of Recursion</h2>
+    <p>While recursion is a powerful tool, it comes with some challenges:</p>
+    <ul>
+        <li><strong>Stack Overflow:</strong> If the recursion goes too deep without hitting the base case, it can cause a stack overflow error, as each recursive call adds a new stack frame.</li>
+        <li><strong>Performance:</strong> Recursive solutions may not be as efficient as iterative ones, especially if the recursion involves repeated calculations (e.g., calculating Fibonacci numbers without memoization).</li>
+    </ul>
+    <p>To avoid these pitfalls, it’s important to:</p>
+    <ul>
+        <li>Ensure that the base case will eventually be reached.</li>
+        <li>Consider using techniques like memoization or tail recursion to optimize performance when necessary.</li>
+    </ul>
+
+    <h3>Summary of Key Points</h3>
+    <ul>
+        <li>Recursion is when a function calls itself to solve a problem.</li>
+        <li>A recursive function has two parts: the base case and the recursive case.</li>
+        <li>Common use cases for recursion include mathematical calculations, tree traversal, and algorithms like quicksort and mergesort.</li>
+        <li>Recursion can lead to stack overflow errors and performance issues if not used carefully.</li>
+    </ul>
+
+    <h3>More Resources for Learning Recursion</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#recursion">MDN - Recursion</a></li>
+        <li><a href="https://javascript.info/recursion">JavaScript.info - Recursion</a></li>
+        <li><a href="https://www.freecodecamp.org/news/recursion-in-javascript-with-examples/">FreeCodeCamp - Recursion in JavaScript</a></li>
+    </ul>
+</section>

@@ -1,0 +1,134 @@
+<section id="getting-started">
+    <h1>Getting Started with JavaScript</h1>
+    <hr>
+
+    <h2>Installing Node.js with Homebrew</h2>
+    <p>Node.js is a runtime that allows you to run JavaScript outside the browser. It is essential for server-side JavaScript and many modern web development tools. Here's how to install it using Homebrew on macOS:</p>
+    <ul>
+        <li>First, if you don't have Homebrew installed, open your terminal and run:</li>
+        <div class="code-container">
+            <div class="code-wrapper">
+                <div class="line-numbers">
+                    <div class="line">1</div>
+                </div>
+                <div class="code">
+                    <div class="line">/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</div>
+                </div>
+            </div>
+        </div>
+        <li>Once Homebrew is installed, update it with the following command:</li>
+        <div class="code-container">
+            <div class="code-wrapper">
+                <div class="line-numbers">
+                    <div class="line">2</div>
+                </div>
+                <div class="code">
+                    <div class="line">brew update</div>
+                </div>
+            </div>
+        </div>
+        <li>Next, install Node.js by running:</li>
+        <div class="code-container">
+            <div class="code-wrapper">
+                <div class="line-numbers">
+                    <div class="line">3</div>
+                </div>
+                <div class="code">
+                    <div class="line">brew install node</div>
+                </div>
+            </div>
+        </div>
+        <li>Once installed, verify the installation by checking the versions of Node.js and npm (Node Package Manager) with:</li>
+        <div class="code-container">
+            <div class="code-wrapper">
+                <div class="line-numbers">
+                    <div class="line">4</div>
+                </div>
+                <div class="code">
+                    <div class="line">node -v</div>
+                    <div class="line">npm -v</div>
+                </div>
+            </div>
+        </div>
+    </ul>
+    <p>With Node.js installed, you can now run JavaScript files outside of the browser, use npm to manage packages, and build more advanced projects!</p>
+
+    <h2>What is JavaScript?</h2>
+    <p>JavaScript is a programming language that allows you to create interactive effects within web browsers. It is an essential part of web development alongside HTML and CSS.</p>
+
+    <h2>Where Do You Write JavaScript?</h2>
+    <p>JavaScript code is typically written in <code>.js</code> files, which stand for JavaScript. These files contain the code that adds interactivity to websites.</p>
+
+    <h2>Creating Your First JavaScript File</h2>
+    <p>To create a simple JavaScript file, follow these steps:</p>
+    <ul>
+        <li>Create a new file and name it <code>script.js</code> (or any name ending in <code>.js</code>).</li>
+        <li>Write your JavaScript code inside the file. For example:</li>
+    </ul>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">console.log("Hello, world!");</div>
+            </div>
+        </div>
+    </div>
+    <p>This is a simple JavaScript command that logs the message "Hello, world!" to the console.</p>
+
+    <h2>Linking JavaScript to Your HTML</h2>
+    <p>To use your JavaScript in an HTML file, you need to link the <code>.js</code> file to your HTML. You do this by including a <code>&lt;script&gt;</code> tag in the HTML file. Here's an example:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">&lt;!DOCTYPE html&gt;</div>
+                <div class="line">&lt;html&gt;</div>
+                <div class="line">  &lt;head&gt;</div>
+                <div class="line">    &lt;title&gt;My First JavaScript&lt;/title&gt;</div>
+                <div class="line">  &lt;/head&gt;</div>
+                <div class="line">  &lt;body&gt;</div>
+                <div class="line">    &lt;h1&gt;Welcome to JavaScript&lt;/h1&gt;</div>
+                <div class="line">    &lt;script src="script.js"&gt;&lt;/script&gt;</div>
+                <div class="line">  &lt;/body&gt;</div>
+                <div class="line">&lt;/html&gt;</div>
+            </div>
+        </div>
+    </div>
+    <p>In the above example, the <code>&lt;script src="script.js"&gt;</code> tag links the <code>script.js</code> JavaScript file to the HTML file. When you open this HTML file in a web browser, the JavaScript will run, and you'll see "Hello, world!" in the browser's console.</p>
+
+    <h2>Running Your JavaScript Code</h2>
+    <p>Once you have linked your JavaScript file to an HTML file, you can open the HTML file in a browser and use the browser's developer tools (usually accessible by pressing <code>F12</code>) to view the output of your JavaScript code in the console.</p>
+
+    <h2>Inspecting Website Code in Chrome</h2>
+    <p>If you're curious about how other websites use JavaScript, you can inspect their code easily in Google Chrome. Here’s how:</p>
+    <ul>
+        <li>Right-click anywhere on the webpage.</li>
+        <li>Select <strong>"Inspect"</strong> or <strong>"Inspect Element"</strong> from the context menu.</li>
+        <li>This will open the Chrome Developer Tools panel. You can now view the HTML, CSS, and JavaScript code of the webpage.</li>
+        <li>To view the JavaScript code specifically, click on the <strong>"Console"</strong> tab to see any outputs or errors from the JavaScript running on the page. You can also click on the <strong>"Sources"</strong> tab to see the JavaScript files the page is using.</li>
+    </ul>
+    <p>This is a great way to learn how websites implement JavaScript and see examples of real-world code in action!</p>
+
+    <h3>Summary of Key Points</h3>
+    <ul>
+        <li>JavaScript files end in <code>.js</code>.</li>
+        <li>You can write JavaScript code in any text editor and save the file with the <code>.js</code> extension.</li>
+        <li>To use JavaScript in an HTML file, link it using the <code>&lt;script&gt;</code> tag.</li>
+        <li>Use <code>console.log()</code> to output messages to the browser's console for debugging.</li>
+        <li>Use Chrome's "Inspect" tool to view the code of other websites and see how JavaScript is being used in real projects.</li>
+        <li>Node.js can be installed with Homebrew using the command <code>brew install node</code>.</li>
+    </ul>
+
+    <h3>Next Steps</h3>
+    <p>Once you are comfortable with the basics, you can move on to more advanced topics like variables, functions, and loops. JavaScript is a powerful language, and learning it opens up a lot of possibilities for creating dynamic websites and applications.</p>
+
+    <h3>More Resources for Learning JavaScript</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN JavaScript Guide</a></li>
+        <li><a href="https://javascript.info/">JavaScript.info - The Modern JavaScript Tutorial</a></li>
+    </ul>
+</section>

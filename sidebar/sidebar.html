@@ -5,29 +5,102 @@
             <nav>
                 <h2 class="text-white text-center">Navigation</h2>
                 <ul class="nav flex-column">
-                    
-                    <li class="section-header">Terminal</li>
-                    <li class="nav-item"><a class="nav-link" href="#/terminal/file-paths">File Paths</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/terminal/terminal-commands">Commands</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/terminal/common-terminal-errors">Common Errors</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/terminal/clone-add-commit-push">Clone, Add, Commit and Push</a></li>
 
-                    <!-- <li class="nav-item"><a class="nav-link" href="#/git/add-commit-push">Git Add, Commit, and Push</a></li> -->
-                    
-                    <li class="section-header">JavaScript</li>
-                    <li class="nav-item"><a class="nav-link" href="#/javascript/variables">Variables</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/javascript/data-types">Data Types</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/javascript/operators">Operators</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/javascript/conditionals">Conditionals</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/javascript/loops">Loops</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/javascript/functions">Functions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/javascript/expressions">Expressions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/javascript/statements">Statements</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="#/javascript/expressions">Expressions</a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="#/javascript/random-js-questions">JS Questions</a></li>
+                    <!-- Terminal Section (Collapsible) -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#terminal-section" role="button" aria-expanded="false" aria-controls="terminal-section">
+                            <span>Terminal</span>
+                            <i class="bi bi-chevron-down float-end"></i>
+                        </a>
+                        <div class="collapse" id="terminal-section">
+                            <ul class="nav flex-column ps-3">
+                                <li class="nav-item"><a class="nav-link" href="#/terminal/file-paths">File Paths</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#/terminal/terminal-commands">Commands</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#/terminal/common-terminal-errors">Common Errors</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#/terminal/clone-add-commit-push">Clone, Add, Commit and Push</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-                    <li class="section-header">Vocab</li>
-                    <li class="nav-item"><a class="nav-link" href="#/vocab/expressions">Expressions</a></li>                   
+                    <!-- JavaScript Section (Collapsible) -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#js-section" role="button" aria-expanded="false" aria-controls="js-section">
+                            <span>JavaScript</span>
+                            <i class="bi bi-chevron-down float-end"></i>
+                        </a>
+                        <div class="collapse" id="js-section">
+                            <ul class="nav flex-column ps-3">
+                                <!-- Basics -->
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="collapse" href="#js-basics" role="button" aria-expanded="false" aria-controls="js-basics">
+                                        Basics
+                                        <i class="bi bi-chevron-right float-end"></i>
+                                    </a>
+                                    <div class="collapse" id="js-basics">
+                                        <ul class="nav flex-column ps-3">
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/getting-started">Getting Started</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/variables">Variables</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/data-types">Data Types</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/operators">Operators</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <!-- Control Flow -->
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="collapse" href="#js-control-flow" role="button" aria-expanded="false" aria-controls="js-control-flow">
+                                        Control Flow
+                                        <i class="bi bi-chevron-right float-end"></i>
+                                    </a>
+                                    <div class="collapse" id="js-control-flow">
+                                        <ul class="nav flex-column ps-3">
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/conditionals">Conditionals</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/loops">Loops</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/switch-statements">Switch Statements</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/short-circuit-logic">Short-Circuit Logic</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <!-- Functions & Expressions -->
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="collapse" href="#js-functions-expressions" role="button" aria-expanded="false" aria-controls="js-functions-expressions">
+                                        Functions & Expressions
+                                        <i class="bi bi-chevron-right float-end"></i>
+                                    </a>
+                                    <div class="collapse" id="js-functions-expressions">
+                                        <ul class="nav flex-column ps-3">
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/functions">Functions</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/expressions">Expressions</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/recursion">Recursion</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <!-- Advanced Topics -->
+                                <li class="nav-item">
+                                    <a class="nav-link" data-bs-toggle="collapse" href="#js-advanced-topics" role="button" aria-expanded="false" aria-controls="js-advanced-topics">
+                                        Advanced Topics
+                                        <i class="bi bi-chevron-right float-end"></i>
+                                    </a>
+                                    <div class="collapse" id="js-advanced-topics">
+                                        <ul class="nav flex-column ps-3">
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/scope-and-closure">Scope and Closure</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/objects-and-methods">Objects and Methods</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#/javascript/string-formatting">String Formatting</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <!-- Extras -->
+                                <li class="nav-item">
+                                    <li class="nav-item"><a class="nav-link" href="#/javascript/flashcards">JS Flashcards</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#/javascript/best-practices">Best Practices / Styling</a></li>
+                                    <a class="nav-link" href="#/javascript/random-js-questions">Random JS Questions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
 
                 </ul>
             </nav>

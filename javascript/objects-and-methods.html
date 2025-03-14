@@ -1,0 +1,107 @@
+<section id="objects-and-methods">
+    <h1>Objects and Methods in JavaScript</h1>
+    <hr>
+
+    <h2>What Are Objects in JavaScript?</h2>
+    <p>In JavaScript, an object is a collection of properties and methods. Properties are values associated with the object, while methods are functions that belong to the object. Objects are used to store and manage data in a structured way.</p>
+
+    <h2>Creating an Object</h2>
+    <p>Objects can be created using curly braces (<code>{}</code>) with key-value pairs. Each key is called a property, and the value can be anything, such as a string, number, array, or even another object.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let person = {</div>
+                <div class="line indent">name: "John",</div>
+                <div class="line indent">age: 30,</div>
+                <div class="line indent">city: "New York"</div>
+                <div class="line">};</div>
+            </div>
+        </div>
+    </div>
+    <p>In this example, the <code>person</code> object has three properties: <code>name</code>, <code>age</code>, and <code>city</code>.</p>
+
+    <h2>Accessing Object Properties</h2>
+    <p>You can access the properties of an object using either dot notation or bracket notation:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">console.log(person.name); // Outputs: "John"</div>
+                <div class="line">console.log(person["age"]); // Outputs: 30</div>
+            </div>
+        </div>
+    </div>
+    <p>In the example above, <code>person.name</code> and <code>person["age"]</code> are used to access the properties of the <code>person</code> object. Both methods work equally well, but dot notation is more commonly used.</p>
+
+    <h2>What Are Methods?</h2>
+    <p>Methods are functions that are part of an object. They allow objects to perform actions or manipulate their own data. You can define a method inside an object by assigning a function to a property.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">3</div>
+            </div>
+            <div class="code">
+                <div class="line">let person = {</div>
+                <div class="line indent">name: "John",</div>
+                <div class="line indent">age: 30,</div>
+                <div class="line indent">city: "New York",</div>
+                <div class="line indent">greet: function() {</div>
+                <div class="line indent}>    console.log("Hello, my name is " + this.name);</div>
+                <div class="line indent">}</div>
+                <div class="line">};</div>
+            </div>
+        </div>
+    </div>
+    <p>Here, the <code>greet</code> method is defined inside the <code>person</code> object. When called, it will log a greeting message that includes the <code>name</code> property of the object using the <code>this</code> keyword.</p>
+
+    <h2>Calling Methods</h2>
+    <p>You can call an object's method using dot notation:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">4</div>
+            </div>
+            <div class="code">
+                <div class="line">person.greet(); // Outputs: "Hello, my name is John"</div>
+            </div>
+        </div>
+    </div>
+    <p>In this case, calling <code>person.greet()</code> invokes the method, and it prints the greeting message to the console.</p>
+
+    <h2>Console as an Object with Methods</h2>
+    <p>An example of an object with methods that you are likely already familiar with is <code>console</code>. The <code>console</code> object is built into JavaScript and has several methods, including <code>console.log()</code>, which is commonly used to display messages in the console.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">5</div>
+            </div>
+            <div class="code">
+                <div class="line">console.log("This is a log message!");</div>
+                <div class="line">console.log("Another message with a value:", 42);</div>
+            </div>
+        </div>
+    </div>
+    <p>In this example, <code>console.log</code> is a method of the <code>console</code> object. You can use it to log messages or other values to the browser's developer tools console.</p>
+
+    <h2>Summary of Key Points</h2>
+    <ul>
+        <li>Objects are collections of properties (key-value pairs) and methods (functions associated with the object).</li>
+        <li>Methods are functions defined inside an object that allow the object to perform actions or manipulate its properties.</li>
+        <li>You can access object properties using dot notation or bracket notation.</li>
+        <li>The <code>console</code> object in JavaScript contains several useful methods, such as <code>console.log()</code> for logging messages to the console.</li>
+    </ul>
+
+    <h3>Next Steps</h3>
+    <p>Now that you've learned the basics of objects and methods, you can explore more advanced topics like object inheritance, the <code>this</code> keyword, and how to manipulate data within objects. Understanding how to work with objects is fundamental to writing more complex and organized JavaScript code.</p>
+
+    <h3>More Resources for Learning JavaScript Objects and Methods</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects">MDN - Working with Objects</a></li>
+        <li><a href="https://javascript.info/object">JavaScript.info - Objects</a></li>
+    </ul>
+</section>

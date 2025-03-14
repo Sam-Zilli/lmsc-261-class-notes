@@ -1,0 +1,108 @@
+<section id="short-circuit-logic">
+    <h1>Understanding Short-Circuit Logic in JavaScript</h1>
+    <hr>
+
+    <h2>What is Short-Circuit Logic?</h2>
+    <p>Short-circuit logic in JavaScript refers to the behavior of logical operators (AND, OR, and nullish coalescing) where evaluation stops as soon as the result is determined. This behavior allows for more efficient code execution and is especially useful in conditional statements.</p>
+
+    <h2>Logical AND (&&) and Short-Circuiting</h2>
+    <p>The <code>&&</code> (AND) operator evaluates the second operand only if the first operand is true. If the first operand is false, the entire expression will be false, and JavaScript will not evaluate the second operand. This is called short-circuiting.</p>
+    <p>For example:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let result = false && (console.log("This will not run"));</div>
+                <div class="line">console.log(result); // Outputs: false</div>
+            </div>
+        </div>
+    </div>
+    <p>In this example, since the first operand is <code>false</code>, JavaScript does not evaluate the second operand, which is the <code>console.log</code> statement. This results in a more efficient evaluation.</p>
+
+    <h2>Logical OR (||) and Short-Circuiting</h2>
+    <p>The <code>||</code> (OR) operator evaluates the second operand only if the first operand is false. If the first operand is true, the entire expression will be true, and JavaScript will not evaluate the second operand. This is also short-circuiting.</p>
+    <p>For example:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">let result = true || (console.log("This will not run"));</div>
+                <div class="line">console.log(result); // Outputs: true</div>
+            </div>
+        </div>
+    </div>
+    <p>In this case, since the first operand is <code>true</code>, the second operand is never evaluated, and the entire expression evaluates to <code>true</code>.</p>
+
+    <h2>Nullish Coalescing Operator (??)</h2>
+    <p>The <code>??</code> (nullish coalescing) operator is used to provide a default value when the left-hand operand is either <code>null</code> or <code>undefined</code>. Unlike the <code>||</code> (OR) operator, which considers all falsy values (like <code>0</code>, <code>""</code>, <code>false</code>, etc.), the <code>??</code> operator only checks for <code>null</code> and <code>undefined</code>, making it more precise for setting default values.</p>
+    <p>For example:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">3</div>
+            </div>
+            <div class="code">
+                <div class="line">let userName = null;</div>
+                <div class="line">let defaultName = "Guest";</div>
+                <div class="line">let finalName = userName ?? defaultName;</div>
+                <div class="line">console.log(finalName); // Outputs: "Guest"</div>
+            </div>
+        </div>
+    </div>
+    <p>In this case, since <code>userName</code> is <code>null</code>, the <code>defaultName</code> value ("Guest") is used as the result of the expression. If <code>userName</code> was a falsy value like an empty string, the default would not be used because <code>""</code> is not <code>null</code> or <code>undefined</code>.</p>
+
+    <h2>Using Short-Circuiting for Default Values</h2>
+    <p>Both the <code>||</code> (OR) and <code>??</code> (nullish coalescing) operators can be used to provide default values, but they behave slightly differently. The <code>??</code> operator is more precise and avoids unwanted behaviors when dealing with other falsy values like <code>0</code> or <code>""</code>.</p>
+    <p>For example:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">4</div>
+            </div>
+            <div class="code">
+                <div class="line">let userAge = 0;</div>
+                <div class="line">let defaultAge = 25;</div>
+                <div class="line">let finalAge = userAge ?? defaultAge;</div>
+                <div class="line">console.log(finalAge); // Outputs: 0</div>
+            </div>
+        </div>
+    </div>
+    <p>In this case, the value of <code>userAge</code> is <code>0</code>, which is a falsy value, but because we are using <code>??</code> (nullish coalescing), it does not trigger the default value. If we had used <code>||</code>, the default value would have been used because <code>0</code> is considered falsy by the <code>||</code> operator.</p>
+
+    <h2>Using Short-Circuiting for Function Execution</h2>
+    <p>Short-circuit logic can also be used to execute functions only when needed. For example, with the AND operator, you can ensure that a function is called only if a certain condition is true:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">5</div>
+            </div>
+            <div class="code">
+                <div class="line">let isUserLoggedIn = true;</div>
+                <div class="line">isUserLoggedIn && alert("Welcome back!");</div>
+            </div>
+        </div>
+    </div>
+    <p>In this example, the <code>alert</code> function is called only if the <code>isUserLoggedIn</code> variable is <code>true</code>. This is a common pattern in JavaScript.</p>
+
+    <h2>Summary of Short-Circuit Logic</h2>
+    <ul>
+        <li>Short-circuiting occurs when an operator stops evaluating as soon as the result is known.</li>
+        <li>With <code>&&</code> (AND), if the first operand is <code>false</code>, the second operand is not evaluated.</li>
+        <li>With <code>||</code> (OR), if the first operand is <code>true</code>, the second operand is not evaluated.</li>
+        <li>With <code>??</code> (nullish coalescing), if the first operand is <code>null</code> or <code>undefined</code>, the second operand is evaluated.</li>
+        <li>Short-circuiting can be used to provide default values and to control function execution efficiently.</li>
+    </ul>
+
+    <h3>Next Steps</h3>
+    <p>Now that you understand the basics of short-circuit logic, you can use these concepts in real-world code to write more efficient and concise JavaScript. It's especially useful for setting default values or conditionally executing code based on certain criteria.</p>
+
+    <h3>More Resources for Learning JavaScript</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators">MDN - Logical Operators</a></li>
+        <li><a href="https://javascript.info/logical-operators">JavaScript.info - Logical Operators</a></li>
+    </ul>
+</section>

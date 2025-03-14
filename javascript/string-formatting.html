@@ -1,0 +1,114 @@
+<section id="string-formatting">
+    <h1>String Formatting in JavaScript</h1>
+    <hr>
+
+    <h2>What is String Formatting?</h2>
+    <p>String formatting refers to the process of embedding values into strings or manipulating string data to make it more readable and structured. JavaScript offers several ways to format and manipulate strings, including basic concatenation, template literals, and escape characters like <code>\n</code> for line breaks.</p>
+
+    <h2>Basic String Concatenation</h2>
+    <p>In JavaScript, you can combine strings using the <code>+</code> operator. This is known as string concatenation:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let firstName = "John";</div>
+                <div class="line">let lastName = "Doe";</div>
+                <div class="line">let fullName = firstName + " " + lastName;</div>
+                <div class="line">console.log(fullName); // Outputs: "John Doe"</div>
+            </div>
+        </div>
+    </div>
+    <p>Here, the first name and last name are combined using the <code>+</code> operator.</p>
+
+    <h2>Using Template Literals</h2>
+    <p>Template literals, enclosed in backticks (<code>``</code>), provide a more readable and convenient way to format strings. You can embed expressions inside template literals using <code>${}</code>.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">let firstName = "John";</div>
+                <div class="line">let lastName = "Doe";</div>
+                <div class="line">let fullName = `${firstName} ${lastName}`;</div>
+                <div class="line">console.log(fullName); // Outputs: "John Doe"</div>
+            </div>
+        </div>
+    </div>
+    <p>In this example, we use a template literal to embed the values of <code>firstName</code> and <code>lastName</code> into the <code>fullName</code> string.</p>
+
+    <h2>Escape Characters for String Formatting</h2>
+    <p>Escape characters are special characters that allow you to include characters in strings that would otherwise be difficult to represent, such as new lines, tabs, or quotes.</p>
+
+    <h3>Using <code>\n</code> for New Lines</h3>
+    <p>The <code>\n</code> escape character represents a newline, allowing you to break up a string across multiple lines. This is useful for formatting large blocks of text, logs, or multi-line messages.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">3</div>
+            </div>
+            <div class="code">
+                <div class="line">let message = "Hello, World!\nThis is a new line."; </div>
+                <div class="line">console.log(message);</div>
+            </div>
+        </div>
+    </div>
+    <p>In the example above, the string will be output as:</p>
+    <pre>
+    Hello, World!
+    This is a new line.
+    </pre>
+    <p>The <code>\n</code> creates a line break between "Hello, World!" and "This is a new line".</p>
+
+    <h3>Other Useful Escape Characters</h3>
+    <ul>
+        <li><code>\t</code>: Inserts a tab space.</li>
+        <li><code>\\</code>: Inserts a backslash.</li>
+        <li><code>\'</code>: Inserts a single quote.</li>
+        <li><code>\"</code>: Inserts a double quote.</li>
+        <li><code>\r</code>: Carriage return (moves cursor to the beginning of the line).</li>
+    </ul>
+
+    <h2>Multiline Strings with Template Literals</h2>
+    <p>Template literals also support multi-line strings without the need for escape characters. This makes it easy to format large text blocks or HTML within JavaScript code:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">4</div>
+            </div>
+            <div class="code">
+                <div class="line">let multilineMessage = `</div>
+                <div class="line">    Hello,</div>
+                <div class="line">    Welcome to JavaScript!</div>
+                <div class="line">    We hope you enjoy learning.`;</div>
+                <div class="line">console.log(multilineMessage);</div>
+            </div>
+        </div>
+    </div>
+    <p>Output:</p>
+    <pre>
+    Hello,
+    Welcome to JavaScript!
+    We hope you enjoy learning.
+    </pre>
+    <p>In this example, the multiline string is directly written inside a template literal, making it easier to manage text that spans multiple lines.</p>
+
+    <h2>Summary of String Formatting Techniques</h2>
+    <ul>
+        <li>Use <code>+</code> for basic string concatenation.</li>
+        <li>Use template literals (<code>``</code>) for embedding expressions and multi-line strings.</li>
+        <li>Use escape characters like <code>\n</code> for new lines and <code>\t</code> for tab spaces.</li>
+        <li>Template literals allow for easier handling of multi-line strings and dynamic content.</li>
+    </ul>
+
+    <h3>Next Steps</h3>
+    <p>Now that you've learned some basic techniques for string formatting, you can apply these methods to build more dynamic and readable strings in your JavaScript code. Whether it's creating user-friendly messages, displaying data, or logging information, understanding string formatting is an essential skill in JavaScript programming.</p>
+
+    <h3>More Resources for Learning JavaScript</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#strings">MDN - JavaScript Strings</a></li>
+        <li><a href="https://javascript.info/string">JavaScript.info - Strings</a></li>
+    </ul>
+</section>

@@ -32,10 +32,25 @@
     text-decoration: underline;
 }
 
+/* Collapsible Sections */
+.sidebar nav ul .collapse {
+    padding-left: 15px;  /* Indent content inside collapsible sections */
+}
+
+.sidebar nav ul .collapse ul {
+    padding-left: 0;
+    list-style: none;
+}
+
 .sidebar .section-header {
     font-weight: bold;
     color: #ccc;
     margin-top: 20px;
+}
+
+/* Add a slight border between collapsible sections */
+.sidebar nav ul .nav-item .collapse {
+    border-bottom: 1px solid #444;
 }
 
 /* Main Content Area */
@@ -53,7 +68,18 @@
         height: auto;  /* Adjust height for smaller screens */
         overflow-y: visible;  /* Disable scrolling on smaller screens */
     }
+
     .main-content {
         margin-left: 0;  /* Reset left margin for smaller screens */
+    }
+
+    /* Adjust padding for smaller screens */
+    .sidebar nav ul .nav-link {
+        padding-left: 10px;
+    }
+    
+    /* Optional: Adjust collapsible behavior on smaller screens */
+    .sidebar nav ul .collapse {
+        padding-left: 20px;  /* Slightly larger indent on mobile */
     }
 }

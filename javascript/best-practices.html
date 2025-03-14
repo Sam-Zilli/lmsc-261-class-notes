@@ -1,0 +1,140 @@
+<section id="javascript-best-practices">
+    <h1>JavaScript Best Practices</h1>
+    <hr>
+    <h2>What Are Best Practices?</h2>
+    <p>Best practices are a set of guidelines, recommendations, and techniques that developers follow to write clean, efficient, and maintainable code. Following best practices ensures that your JavaScript code is easier to read, debug, and extend, while also improving performance and scalability.</p>
+
+    <h2>1. Use Camel Case for Variables and Functions</h2>
+    <p>Camel case is a naming convention where the first word is lowercase, and each subsequent word starts with an uppercase letter. This makes variable and function names more readable and easier to understand. It’s a widely adopted convention in JavaScript.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let userAge = 25;</div>
+                <div class="line">function calculateTotalPrice() {</div>
+                <div class="line indent">  // function logic</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+    <p>In this example, <code>userAge</code> and <code>calculateTotalPrice</code> follow camel case. It’s important to use camel case for consistency and readability.</p>
+
+    <h2>2. Use Proper Indentation</h2>
+    <p>Proper indentation is crucial for maintaining code readability. Each level of nesting (e.g., within loops, functions, conditionals) should be indented to clearly show the structure of your code. Most developers follow a 2 or 4-space indentation style, and it’s best to stay consistent throughout your project.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">if (isAvailable) {</div>
+                <div class="line indent">  console.log("Item is available.");</div>
+                <div class="line">} else {</div>
+                <div class="line indent">  console.log("Item is out of stock.");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+    <p>Notice how each level of code is indented inside the <code>if</code> and <code>else</code> statements, making it easier to follow the logic.</p>
+
+    <h2>3. Declare Variables at the Top</h2>
+    <p>In JavaScript, it’s a good practice to declare all variables at the top of their scope. This helps with readability and ensures that you avoid issues related to variable hoisting (the process where variable declarations are moved to the top of their scope during execution).</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">3</div>
+            </div>
+            <div class="code">
+                <div class="line">let totalAmount;</div>
+                <div class="line">let taxRate = 0.05;</div>
+                <div class="line">totalAmount = 1000 * (1 + taxRate);</div>
+            </div>
+        </div>
+    </div>
+    <p>Here, <code>totalAmount</code> and <code>taxRate</code> are declared at the top of the function to ensure that all variables are initialized before they are used.</p>
+
+    <h2>4. Avoid Global Variables</h2>
+    <p>Global variables can lead to naming conflicts and make your code harder to debug. Whenever possible, try to limit the use of global variables by declaring variables within functions or blocks. If you do need a global variable, consider using modules or namespaces to encapsulate it.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">4</div>
+            </div>
+            <div class="code">
+                <div class="line">let counter = 0;</div>
+                <div class="line">function incrementCounter() {</div>
+                <div class="line indent">  counter++;</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+    <p>In this example, <code>counter</code> is a global variable. Instead of relying on global variables, try to limit their use by placing variables within functions whenever possible.</p>
+
+    <h2>5. Use Strict Mode</h2>
+    <p>Enabling strict mode in JavaScript helps catch common mistakes and unsafe actions. Strict mode prevents the use of undeclared variables, silent errors, and other practices that are considered poor or risky. You can enable strict mode by adding the following line at the top of your JavaScript files or functions:</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">5</div>
+            </div>
+            <div class="code">
+                <div class="line">"use strict";</div>
+            </div>
+        </div>
+    </div>
+    <p>Strict mode helps to catch potential bugs early by making the JavaScript engine more strict about how your code behaves.</p>
+
+    <h2>6. Comment Your Code</h2>
+    <p>Commenting your code is essential for making your code understandable to others (and to your future self). Use comments to explain the purpose of functions, variables, and complex logic. However, avoid over-commenting and focus on writing clear, readable code that speaks for itself.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">6</div>
+            </div>
+            <div class="code">
+                <div class="line">// Calculate the total price with tax</div>
+                <div class="line">let totalPrice = price * (1 + taxRate);</div>
+            </div>
+        </div>
+    </div>
+    <p>Here, the comment explains the logic behind the calculation, making it easier for someone else to understand the purpose of the code.</p>
+
+    <h2>7. Use ES6+ Features</h2>
+    <p>Modern JavaScript (ES6 and later) introduces many new features that can make your code cleaner, more concise, and easier to work with. Some of the most useful features include:</p>
+    <ul>
+        <li><strong>Arrow functions:</strong> Shorter syntax for writing functions.</li>
+        <li><strong>Template literals:</strong> Easier string interpolation with backticks (``).</li>
+        <li><strong>Destructuring:</strong> Easier way to extract values from objects and arrays.</li>
+        <li><strong>Let and const:</strong> Block-scoped variables that improve scoping over var.</li>
+    </ul>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">7</div>
+            </div>
+            <div class="code">
+                <div class="line">const calculateTotal = (price, taxRate) => price * (1 + taxRate);</div>
+                <div class="line">let { name, age } = user;</div>
+            </div>
+        </div>
+    </div>
+
+    <h3>Summary of Key Points</h3>
+    <ul>
+        <li>Use camel case for variable and function names.</li>
+        <li>Maintain proper indentation for readability.</li>
+        <li>Declare variables at the top of their scope to avoid hoisting issues.</li>
+        <li>Limit the use of global variables to avoid conflicts.</li>
+        <li>Enable strict mode for safer coding practices.</li>
+        <li>Comment your code effectively but avoid over-commenting.</li>
+        <li>Use ES6+ features for cleaner, more efficient code.</li>
+    </ul>
+
+    <h3>More Resources for Learning Best Practices</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Code_quality">MDN - JavaScript Code Quality</a></li>
+        <li><a href="https://www.freecodecamp.org/news/javascript-best-practices-for-beginners/">FreeCodeCamp - JavaScript Best Practices</a></li>
+    </ul>
+</section>

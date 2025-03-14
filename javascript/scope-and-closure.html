@@ -1,0 +1,139 @@
+<section id="javascript-scope">
+    <h1>JavaScript Scope and Closure</h1>
+    <hr>
+    
+    <h2>What is Scope?</h2>
+    <p>In JavaScript, <strong>scope</strong> refers to the visibility or accessibility of variables, functions, and objects at different parts of your code. It defines where these elements can be accessed or modified. There are different types of scope in JavaScript, primarily global and local scope.</p>
+
+    <h2>Global Scope</h2>
+    <p>A variable or function that is declared outside of any function or block is said to be in the global scope. It is accessible throughout your entire JavaScript code, meaning it can be used anywhere after it’s been declared.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let globalVar = "I'm global!";</div>
+                <div class="line">function displayGlobalVar() {</div>
+                <div class="line indent">  console.log(globalVar);</div>
+                <div class="line">}</div>
+                <div class="line">displayGlobalVar(); // Outputs: "I'm global!"</div>
+            </div>
+        </div>
+    </div>
+    <p>Here, the variable <code>globalVar</code> is declared in the global scope and can be accessed both inside the <code>displayGlobalVar</code> function and outside it.</p>
+
+    <h2>Local Scope</h2>
+    <p>Local scope refers to variables that are declared inside a function or a block. These variables can only be accessed within that function or block, and they are not visible from outside of it.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">function localScopeExample() {</div>
+                <div class="line indent">  let localVar = "I'm local!";</div>
+                <div class="line indent">  console.log(localVar);</div>
+                <div class="line">}</div>
+                <div class="line">localScopeExample();</div>
+            </div>
+        </div>
+    </div>
+    <p>The variable <code>localVar</code> is declared within the <code>localScopeExample</code> function and is only accessible inside the function. If you try to access <code>localVar</code> outside the function, you will get an error.</p>
+
+    <h2>Block Scope</h2>
+    <p>Block scope is a type of local scope that applies to variables declared inside a block, such as loops or conditionals. Variables declared with <code>let</code> or <code>const</code> inside a block are limited to that block and cannot be accessed outside it.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">3</div>
+            </div>
+            <div class="code">
+                <div class="line">if (true) {</div>
+                <div class="line indent">  let blockVar = "I'm block scoped!";</div>
+                <div class="line indent">  console.log(blockVar); // Outputs: "I'm block scoped!"</div>
+                <div class="line">}</div>
+                <div class="line">console.log(blockVar); // Error: blockVar is not defined</div>
+            </div>
+        </div>
+    </div>
+    <p>The variable <code>blockVar</code> is scoped to the <code>if</code> block. It is accessible inside the block, but if you try to log it outside the block, you will encounter a reference error.</p>
+
+    <h2>Function Scope</h2>
+    <p>In JavaScript, function scope means that variables declared within a function are only accessible within that function. This is the same as local scope, but specifically related to functions.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">4</div>
+            </div>
+            <div class="code">
+                <div class="line">function example() {</div>
+                <div class="line indent">  let funcVar = "I'm function scoped!";</div>
+                <div class="line indent">  console.log(funcVar); // Outputs: "I'm function scoped!"</div>
+                <div class="line">}</div>
+                <div class="line">console.log(funcVar); // Error: funcVar is not defined</div>
+            </div>
+        </div>
+    </div>
+    <p>As with other local scopes, <code>funcVar</code> is only accessible inside the <code>example</code> function and will result in an error if accessed outside.</p>
+
+    <h2>Lexical Scope</h2>
+    <p>Lexical scope means that the scope of variables is determined by where they are declared in the source code. Inner functions have access to variables of outer functions because of the lexical scoping rules in JavaScript.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">5</div>
+            </div>
+            <div class="code">
+                <div class="line">function outer() {</div>
+                <div class="line indent">  let outerVar = "I'm outer!";</div>
+                <div class="line indent">  function inner() {</div>
+                <div class="line indent">    console.log(outerVar); // Outputs: "I'm outer!"</div>
+                <div class="line indent">  }</div>
+                <div class="line indent">  inner();</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+    <p>Here, the <code>inner</code> function has access to the <code>outerVar</code> variable from its outer function due to lexical scoping. This is possible even though <code>outerVar</code> is not defined inside the <code>inner</code> function.</p>
+
+    <h2>What is Closure?</h2>
+    <p>In JavaScript, <strong>closure</strong> refers to a function that "remembers" its lexical scope even after the function is executed outside of that scope. In simpler terms, closures allow an inner function to access variables from its outer function, even after the outer function has returned.</p>
+
+    <h3>Example of Closure</h3>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">6</div>
+            </div>
+            <div class="code">
+                <div class="line">function outer() {</div>
+                <div class="line indent">  let outerVar = "I'm outer!";</div>
+                <div class="line indent">  function inner() {</div>
+                <div class="line indent">    console.log(outerVar); // Outputs: "I'm outer!"</div>
+                <div class="line indent">  }</div>
+                <div class="line indent">  return inner;</div>
+                <div class="line">}</div>
+                <div class="line">const closure = outer();</div>
+                <div class="line">closure(); // Outputs: "I'm outer!"</div>
+            </div>
+        </div>
+    </div>
+    <p>In this example, the <code>inner</code> function is returned from the <code>outer</code> function and still has access to the <code>outerVar</code> variable from the outer scope, even though the <code>outer</code> function has already completed execution. This is an example of a closure.</p>
+
+    <h3>Summary of Key Points</h3>
+    <ul>
+        <li>Global scope: Accessible anywhere in your code.</li>
+        <li>Local scope: Only accessible within the function or block where it's declared.</li>
+        <li>Block scope: A subset of local scope that applies to blocks like loops and conditionals.</li>
+        <li>Function scope: Variables declared inside a function are accessible only within that function.</li>
+        <li>Lexical scope: Inner functions can access variables from their outer functions.</li>
+        <li>Closure: A function that "remembers" its lexical scope, even after the outer function has finished executing.</li>
+    </ul>
+
+    <h3>More Resources for Learning Scope and Closure</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">MDN - Closures and Lexical Scoping</a></li>
+        <li><a href="https://javascript.info/closures">JavaScript.info - Closures</a></li>
+    </ul>
+</section>

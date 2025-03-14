@@ -1,0 +1,109 @@
+<section id="javascript-switch-statements">
+    <h1>JavaScript Switch Statements</h1>
+    <hr>
+    <h2>What is a Switch Statement?</h2>
+    <p>A switch statement in JavaScript is a control flow statement that allows you to execute one of many blocks of code based on the value of a variable or expression. It’s often used as a more readable alternative to multiple <code>if-else</code> conditions when you have many possible conditions to check.</p>
+
+    <h2>Syntax of a Switch Statement</h2>
+    <p>The syntax of a switch statement consists of the <code>switch</code> keyword, followed by an expression to evaluate, and then one or more <code>case</code> labels. The statement checks the expression against each <code>case</code>, and if a match is found, the corresponding block of code is executed.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">1</div>
+            </div>
+            <div class="code">
+                <div class="line">let fruit = "apple";</div>
+                <div class="line">switch (fruit) {</div>
+                <div class="line indent">  case "apple":</div>
+                <div class="line indent">    console.log("This is an apple!");</div>
+                <div class="line indent">    break;</div>
+                <div class="line indent">  case "banana":</div>
+                <div class="line indent">    console.log("This is a banana!");</div>
+                <div class="line indent">    break;</div>
+                <div class="line indent">  default:</div>
+                <div class="line indent">    console.log("Unknown fruit!");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+    <p>In this example, the value of <code>fruit</code> is checked against the <code>case</code> labels. If the value matches <code>"apple"</code>, it will log <strong>This is an apple!</strong> to the console. If it doesn't match any of the cases, the <code>default</code> block will execute.</p>
+
+    <h2>Understanding the Break Statement</h2>
+    <p>The <code>break</code> statement is used to terminate the <code>switch</code> block and prevent the code from continuing to check the remaining <code>case</code> labels. Without <code>break</code>, the code would "fall through" to the next case and execute it, even if it doesn’t match the expression.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">2</div>
+            </div>
+            <div class="code">
+                <div class="line">let color = "red";</div>
+                <div class="line">switch (color) {</div>
+                <div class="line indent">  case "red":</div>
+                <div class="line indent">    console.log("Red is a color of passion.");</div>
+                <div class="line">  case "blue":</div>
+                <div class="line indent">    console.log("Blue is the color of the sky.");</div>
+                <div class="line">  case "green":</div>
+                <div class="line indent">    console.log("Green is the color of nature.");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+    <p>If you run the above code without <code>break</code>, it will log all three messages regardless of the value of <code>color</code>. For proper behavior, you should add <code>break</code> after each case block to stop the flow after a match is found.</p>
+
+    <h2>Using the Default Case</h2>
+    <p>The <code>default</code> case is an optional final case that runs if no other <code>case</code> matches the expression. It acts like a fallback in case none of the specified values are found.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">3</div>
+            </div>
+            <div class="code">
+                <div class="line">let animal = "dog";</div>
+                <div class="line">switch (animal) {</div>
+                <div class="line indent">  case "cat":</div>
+                <div class="line indent">    console.log("It's a cat!");</div>
+                <div class="line indent">    break;</div>
+                <div class="line indent">  case "dog":</div>
+                <div class="line indent">    console.log("It's a dog!");</div>
+                <div class="line indent">    break;</div>
+                <div class="line indent">  default:</div>
+                <div class="line indent">    console.log("Unknown animal!");</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+    <p>In this example, the <code>switch</code> checks the value of <code>animal</code>. If it matches "dog", it will log <strong>It's a dog!</strong> to the console. If there’s no match, the <code>default</code> case will execute, logging <strong>Unknown animal!</strong>.</p>
+
+    <h2>Switch with Expressions</h2>
+    <p>You can also use expressions inside the <code>switch</code> statement. The expression doesn't have to be a simple variable or string—it can be any expression that returns a value.</p>
+    <div class="code-container">
+        <div class="code-wrapper">
+            <div class="line-numbers">
+                <div class="line">4</div>
+            </div>
+            <div class="code">
+                <div class="line">let age = 25;</div>
+                <div class="line">switch (true) {</div>
+                <div class="line indent">  case (age >= 18):</div>
+                <div class="line indent">    console.log("Adult");</div>
+                <div class="line indent">    break;</div>
+                <div class="line indent">  case (age < 18):</div>
+                <div class="line indent">    console.log("Minor");</div>
+                <div class="line indent">    break;</div>
+                <div class="line">}</div>
+            </div>
+        </div>
+    </div>
+    <p>In this example, the <code>switch</code> statement checks the condition of <code>age</code>. Since the condition <code>age >= 18</code> is true, it will output <strong>Adult</strong>.</p>
+
+    <h3>Summary of Key Points</h3>
+    <ul>
+        <li>The <code>switch</code> statement checks an expression against multiple cases and executes the block of code for the first matching case.</li>
+        <li>The <code>break</code> statement is used to prevent "fall-through" behavior, where multiple cases execute one after another.</li>
+        <li>The <code>default</code> case acts as a fallback if no case matches the expression.</li>
+        <li>You can use expressions in the <code>switch</code> statement to check complex conditions.</li>
+    </ul>
+
+    <h3>More Resources for Learning Switch Statements</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Ref
