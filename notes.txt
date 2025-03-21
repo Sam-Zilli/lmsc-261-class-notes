@@ -1,0 +1,152 @@
+Common syntax errors:
+Misspellings
+
+Incorrect indentations
+
+Missing or incorrect key characters:
+
+Bracket types - ( curved ), [ square ], { curly }
+
+Quote types - "straight-double" or 'straight-single', “curly-double” or ‘curly-single’
+
+Block introduction characters, like colons - :
+
+Data type mismatches
+
+Missing, incorrectly used, or misplaced Python reserved words
+
+Using the wrong case (uppercase/lowercase) - Python is a case-sensitive language 
+
+Code comparison with Python
+You will be learning about both Python and Bash scripting in this program. The following code illustrates a syntax difference between the two languages:
+
+ Print to screen in Python  
+
+ Print to screen in Bash  
+
+>> print("Hello, how are you?")
+
+Hello, how are you?
+
+>> echo Hello, how are you?
+
+Hello, how are you?
+
+
+  Key Terms
+Platform-specific / OS specific scripting language - Platform-specific scripting languages, like PowerShell (for Windows) and Bash (for Linux), are used by system administrators on those platforms. 
+
+Client-side scripting language - Client-side scripting languages, like JavaScript, are used mostly for web programming. The scripts are transferred from a web server to the end-user’s internet browser, then executed in the browser.
+
+Machine language - Machine language is the lowest-level computer language. It communicates directly with computing machines in binary code (ones and zeros). In binary code, one equals a pulse of electricity and zero equals no electrical pulse. Machine language instructions are made from translating languages like Python into complex patterns of ones and zeros. 
+
+Cross-platform language - Programming language that is compatible with one or more platforms / operating systems (e.g., Windows, Linux, Mac, iOS, Android).
+
+Object-oriented programming language - In object-oriented programming languages, most coding elements are considered to be objects with configurable properties. For example, a form field is an object that can be configured to accept only dates as input in the mm/dd/yy format, and can be configured to read from and write to a specific database. 
+
+Python interpreter - An interpreter is the program that reads and executes Python code by translating Python code into computer instructions.
+
+
+
+
+
+
+
+
+
+Values: True, False, None
+Conditions: if, elif, else
+Logical operators: and, or, not
+Loops: for, in, while, break, continue
+Functions: def, return  
+
+
+
+Arithmetic operators
+Python can calculate numbers using common mathematical operators, along with some special operators, too:  
+
+x + y            Addition + operator returns the sum of x plus y
+x - y             Subtraction - operator returns the difference of x minus y
+x * y            Multiplication * operator returns the product of x times y
+x / y             Division / operator returns the quotient of x divided by y
+x**y            Exponent ** operator returns the result of raising x to the power of y 
+x**2            Square expression returns x squared
+x**3            Cube expression returns x cubed
+x**(1/2)    Square root (½) or (0.5) fractional exponent operator returns the square root of x
+x // y           Floor division operator returns the integer part of the integer division of x by y
+x % y          Modulo operator returns the remainder part of the integer division of x by y
+
+Order of operations
+The order of operations are to be calculated from left to right in the following order: 
+
+Parentheses ( ), { }, [ ]
+
+Exponents xy   (x**y)
+
+Multiplication * and Division /  
+
+Addition + and Subtraction -    
+
+ You might find the PEMDAS mnemonic device to be helpful in remembering the order.   
+
+
+Resources for more information
+For more information about the concepts covered in this reading, please visit:
+
+Built-in Functions
+ - Lists and summarizes Python’s built-in functions.
+
+Python Keywords
+ - Lists Python’s reserved keywords and a brief description of what each keyword does.
+
+Different Arithmetic operators in Python
+ - Provides more examples of the proper syntax for using arithmetic operators in Python.
+
+
+
+Terms and definitions from Course 1, Module 1 
+Automation: The process of replacing a manual step with one that happens automatically
+
+Client-side scripting language: Primarily for web programming; the scripts are transferred from a web server to the end-user’s internet browser, then executed in the browser
+
+Code editors: Tools to provide features, including syntax highlighting, automatic indentation, error checking, and autocompletion
+
+Computer program: A step-by-step list of instructions that a computer follows to reach an intended goal
+
+Functions: A reusable block of code that performs a specific task
+
+IDE: A software application that provides comprehensive facilities for software development
+
+Interpreter: The program that reads and executes code
+
+Input: Information that is provided to a program by the end user
+
+Logic errors: Errors in code that prevent it from running correctly 
+
+Machine language: Lowest-level computer language. It communicates directly with computing machines in binary code (ones and zeros)
+
+Object-oriented programming language: Most coding elements are considered to be objects with configurable properties
+
+Output: the end result of a task performed by a function or computer program
+
+Platform-specific scripting language: Language used by system administrators on those specific platforms 
+
+Programming: The process of writing a program to behave in different ways 
+
+Programming code: A set of written computer instructions, guided by rules, using a computer programming language
+
+Programming languages: Language with syntax and semantics to write computer programs
+
+Python: A general purpose programming language 
+
+Python interpreter: Program that reads and executes Python code by translating Python code into computer instructions
+
+Script: Often used to automate specific tasks
+
+Semantics: The intended meaning or effect of statements, or collections of words, in both human and computer languages
+
+Syntax: The rules for how each statements are constructed in both human and computer languages
+
+Variables: These are used to temporarily store changeable values in programming code
+
+
